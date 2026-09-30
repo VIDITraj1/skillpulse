@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock Interview — SkillPulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/topbar.css">
+<link rel="stylesheet" href="css/dashboard-cards.css">
+<link rel="stylesheet" href="css/mock-interview.css">
+</head>
+<body data-page="interview">
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="app-main">
+    <div id="topbar-root"></div>
+
+    <div class="page-body">
+      <div class="page-heading">
+        <div>
+          <h1>Mock Interview</h1>
+          <p>Practice with AI and get instant feedback.</p>
+        </div>
+      </div>
+
+      <div class="interview-role-tabs" data-tabs="#interview-type-panels">
+        <button data-tab-btn="technical" class="is-active">Technical</button>
+        <button data-tab-btn="hr">HR</button>
+        <button data-tab-btn="company">Company Specific</button>
+      </div>
+
+      <div class="interview-layout">
+        <div id="interview-type-panels">
+          <div data-tab-panel="technical" class="is-active interview-panel">
+            <label for="role-select">Select Role</label>
+            <select id="role-select">
+              <option>Software Developer</option>
+              <option>Frontend Developer</option>
+              <option>Data Analyst</option>
+              <option>UI/UX Designer</option>
+            </select>
+            <button class="btn btn--primary" id="start-interview-btn">Start Interview</button>
+
+            <div class="interview-tips-row">
+              <div class="tip-chip">😊 Be confident</div>
+              <div class="tip-chip">🗣️ Speak clearly</div>
+              <div class="tip-chip">🧱 Keep it structured</div>
+              <div class="tip-chip">💡 Show problem solving</div>
+            </div>
+          </div>
+          <div data-tab-panel="hr" class="interview-panel">
+            <p style="color:var(--ink-500); font-size:0.9rem;">Practice common HR questions about your background, motivation and goals.</p>
+          </div>
+          <div data-tab-panel="company" class="interview-panel">
+            <p style="color:var(--ink-500); font-size:0.9rem;">Select a company above to get tailored interview questions once available.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header"><span class="card__title">Popular Questions</span></div>
+          <div class="card__body">
+            <ul class="question-list">
+              <li><span>1.</span> Tell me about yourself.</li>
+              <li><span>2.</span> What are your strengths?</li>
+              <li><span>3.</span> Explain your project.</li>
+              <li><span>4.</span> Why should we hire you?</li>
+              <li><span>5.</span> What are your future goals?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("start-interview-btn").addEventListener("click", (e) => {
+    e.target.textContent = "Interview starting…";
+    e.target.disabled = true;
+  });
+</script>
+</body>
+</html>

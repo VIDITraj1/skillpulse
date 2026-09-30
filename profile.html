@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile — SkillPulse</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/topbar.css">
+
+
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body data-page="profile">
+
+<div class="app-shell">
+
+
+    <div id="sidebar-root"></div>
+
+
+
+    <div class="app-main">
+
+
+        <div id="topbar-root"></div>
+
+
+
+        <main class="page-body">
+
+
+
+
+            <section class="profile-header-card">
+
+                <div class="profile-header-left">
+
+                    <div class="profile-avatar">
+                        <img
+                            id="profileAvatar"
+                            src="https://i.pravatar.cc/160?img=47"
+                            alt="Profile"
+                        >
+                    </div>
+
+
+                    <div class="profile-header-info">
+
+                        <h1 id="profileUsername">
+                            User
+                        </h1>
+
+                        <p class="profile-handle" id="profileHandle">
+                            @username
+                        </p>
+
+                        <p class="profile-role">
+
+                            <span id="profileDegree">
+                                Degree
+                            </span>
+
+                            <span class="profile-dot">•</span>
+
+                            <span id="profileBranch">
+                                Branch
+                            </span>
+
+                        </p>
+
+                        <p class="profile-email" id="profileEmail">
+                            user@example.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-header-actions">
+
+                    <span class="profile-status-badge" id="profileStatusBadge">
+                        Student
+                    </span>
+
+                    <button
+                        class="profile-edit-btn"
+                        id="editProfileBtn"
+                        type="button"
+                    >
+                        <span>✎</span>
+                        Edit Profile
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+
+            <section class="profile-stats">
+
+                <div class="profile-stat">
+                    <div class="stat-icon">📁</div>
+
+                    <div>
+                        <strong>0</strong>
+                        <span>Projects</span>
+                    </div>
+                </div>
+
+
+                <div class="profile-stat">
+                    <div class="stat-icon">💼</div>
+
+                    <div>
+                        <strong>0</strong>
+                        <span>Internships Applied</span>
+                    </div>
+                </div>
+
+
+                <div class="profile-stat">
+                    <div class="stat-icon">🏆</div>
+
+                    <div>
+                        <strong>0</strong>
+                        <span>Certifications</span>
+                    </div>
+                </div>
+
+
+                <div class="profile-stat">
+                    <div class="stat-icon">⭐</div>
+
+                    <div>
+                        <strong>0</strong>
+                        <span>Achievements</span>
+                    </div>
+                </div>
+
+
+                <div class="profile-stat">
+                    <div class="stat-icon">📈</div>
+
+                    <div>
+                        <strong>0%</strong>
+                        <span>Career Readiness</span>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+            <div class="profile-content-grid">
+
+
+
+                <section class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <div class="card-title-wrapper">
+
+                            <span class="profile-card-icon">
+                                🎓
+                            </span>
+
+                            <h2>Education</h2>
+
+                        </div>
+
+                        <button
+                            class="card-action edit-section-btn"
+                            type="button"
+                        >
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="education-item">
+
+                        <div class="education-logo">
+                            🎓
+                        </div>
+
+
+                        <div class="education-info">
+
+                            <h3 id="profileQualification">
+                                Qualification
+                            </h3>
+
+                            <p id="profileBranchEducation">
+                                Branch / Specialization
+                            </p>
+
+                            <span id="profileCollege">
+                                College / University
+                            </span>
+
+                            <div class="education-meta">
+
+                                <span id="profileGraduationYear">
+                                    Graduation Year
+                                </span>
+
+                                <span id="profileCgpa">
+                                    CGPA
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+
+                <section class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <div class="card-title-wrapper">
+
+                            <span class="profile-card-icon">
+                                ⚡
+                            </span>
+
+                            <h2>Skills</h2>
+
+                        </div>
+
+                        <button
+                            class="card-action"
+                            type="button"
+                            id="skillsEditBtn"
+                        >
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="skill-list">
+
+                        <span class="skill-chip">JavaScript</span>
+                        <span class="skill-chip">React</span>
+                        <span class="skill-chip">Node.js</span>
+                        <span class="skill-chip">MongoDB</span>
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">Git</span>
+                        <span class="skill-chip">Express.js</span>
+                        <span class="skill-chip">SQL</span>
+
+                    </div>
+
+                </section>
+
+
+
+
+                <section class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <div class="card-title-wrapper">
+
+                            <span class="profile-card-icon">
+                                🎯
+                            </span>
+
+                            <h2>Career Preferences</h2>
+
+                        </div>
+
+                        <button
+                            class="card-action edit-section-btn"
+                            type="button"
+                        >
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="preference-list">
+
+                        <div class="preference-item">
+
+                            <span>Looking for</span>
+
+                            <strong id="profileLookingFor">
+                                Not specified
+                            </strong>
+
+                        </div>
+
+
+                        <div class="preference-item">
+
+                            <span>Preferred Role</span>
+
+                            <strong id="profilePreferredRole">
+                                Not specified
+                            </strong>
+
+                        </div>
+
+
+                        <div class="preference-item">
+
+                            <span>Work Preference</span>
+
+                            <strong id="profileWorkPreference">
+                                Not specified
+                            </strong>
+
+                        </div>
+
+
+                        <div class="preference-item">
+
+                            <span>Preferred Location</span>
+
+                            <strong id="profilePreferredLocation">
+                                Not specified
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+
+                <section class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <div class="card-title-wrapper">
+
+                            <span class="profile-card-icon">
+                                👤
+                            </span>
+
+                            <h2>Account Information</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-info">
+
+                        <div class="account-row">
+
+                            <span>Username</span>
+
+                            <strong id="accountUsername">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="account-row">
+
+                            <span>Email</span>
+
+                            <strong id="accountEmail">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="account-row">
+
+                            <span>Current Status</span>
+
+                            <strong id="accountStatus">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="account-row">
+
+                            <span>Expected Graduation</span>
+
+                            <strong id="accountGraduation">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+
+                <section class="profile-card activity-card">
+
+                    <div class="profile-card-header">
+
+                        <div class="card-title-wrapper">
+
+                            <span class="profile-card-icon">
+                                🕒
+                            </span>
+
+                            <h2>Recent Activity</h2>
+
+                        </div>
+
+                        <a href="#" class="view-all">
+                            View all
+                        </a>
+
+                    </div>
+
+
+                    <div class="empty-activity">
+
+                        <div class="empty-activity-icon">
+                            📝
+                        </div>
+
+                        <h3>No recent activity</h3>
+
+                        <p>
+                            Your assessments, projects and achievements
+                            will appear here.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+
+<div
+    class="profile-modal-overlay"
+    id="profileModal"
+    aria-hidden="true"
+>
+
+    <div class="profile-modal">
+
+        <div class="profile-modal-header">
+
+            <div>
+                <h2>Edit Profile</h2>
+
+                <p>
+                    Update your SkillPulse profile information.
+                </p>
+            </div>
+
+            <button
+                class="modal-close-btn"
+                id="closeProfileModal"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="editProfileForm">
+
+
+            <!-- BASIC INFORMATION -->
+
+            <div class="form-section-title">
+                Basic Information
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="editUsername">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editUsername"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="editEmail"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- EDUCATION -->
+
+            <div class="form-section-title">
+                Education
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="editQualification">
+                        Highest Qualification
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editQualification"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editDegree">
+                        Degree
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editDegree"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editBranch">
+                        Branch
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editBranch"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editCollege">
+                        College
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editCollege"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editGraduationYear">
+                        Graduation Year
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editGraduationYear"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editCgpa">
+                        CGPA
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editCgpa"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- CAREER -->
+
+            <div class="form-section-title">
+                Career Preferences
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="editCurrentStatus">
+                        Current Status
+                    </label>
+
+                    <select id="editCurrentStatus">
+
+                        <option value="student">
+                            Student
+                        </option>
+
+                        <option value="graduated">
+                            Graduated
+                        </option>
+
+                        <option value="working">
+                            Working
+                        </option>
+
+                        <option value="internship">
+                            Internship
+                        </option>
+
+                        <option value="job-seeker">
+                            Job Seeker
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editExpectedGraduationYear">
+                        Expected Graduation
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editExpectedGraduationYear"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editLookingFor">
+                        Looking For
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editLookingFor"
+                        placeholder="Internship, Job, Freelance"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editPreferredRoles">
+                        Preferred Roles
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editPreferredRoles"
+                        placeholder="Frontend Developer, AI/ML"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editWorkPreference">
+                        Work Preference
+                    </label>
+
+                    <select id="editWorkPreference">
+
+                        <option value="">
+                            Select preference
+                        </option>
+
+                        <option value="remote">
+                            Remote
+                        </option>
+
+                        <option value="hybrid">
+                            Hybrid
+                        </option>
+
+                        <option value="onsite">
+                            On-site
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editPreferredLocation">
+                        Preferred Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editPreferredLocation"
+                        placeholder="Bhopal, Bengaluru, Remote"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="profile-form-message"
+                id="profileFormMessage"
+            ></div>
+
+
+            <div class="profile-modal-footer">
+
+                <button
+                    type="button"
+                    class="modal-cancel-btn"
+                    id="cancelProfileEdit"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="modal-save-btn"
+                    id="saveProfileBtn"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+</html>

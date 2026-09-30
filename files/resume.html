@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Builder — SkillPulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/topbar.css">
+<link rel="stylesheet" href="css/dashboard-cards.css">
+<link rel="stylesheet" href="css/resume-builder.css">
+</head>
+<body data-page="resume">
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="app-main">
+    <div id="topbar-root"></div>
+
+    <div class="page-body">
+      <div class="page-heading">
+        <div>
+          <h1>Build Your Professional Resume</h1>
+          <p>Create a stand-out resume in minutes.</p>
+        </div>
+        <button class="btn btn--primary" id="download-resume-btn">Download PDF</button>
+      </div>
+
+      <div class="resume-layout">
+        <div class="resume-steps">
+          <div class="resume-step"><span class="resume-step__num">1</span> Personal Details</div>
+          <div class="resume-step"><span class="resume-step__num">2</span> Education</div>
+          <div class="resume-step is-active"><span class="resume-step__num">3</span> Skills</div>
+          <div class="resume-step"><span class="resume-step__num">4</span> Projects</div>
+          <div class="resume-step"><span class="resume-step__num">5</span> Experience</div>
+          <div class="resume-step"><span class="resume-step__num">6</span> Preview</div>
+        </div>
+
+        <div class="resume-preview">
+          <div class="resume-doc__head">
+            <img src="https://i.pravatar.cc/96?img=47" alt="Priya Sharma">
+            <div>
+              <div class="resume-doc__name">Priya Sharma</div>
+              <div class="resume-doc__role">Full Stack Developer</div>
+              <div class="resume-doc__contact">priyasharma@email.com · +91 98765 43210 · Bengaluru</div>
+            </div>
+          </div>
+
+          <div class="resume-doc__section">
+            <h4>Education</h4>
+            <div class="resume-doc__row"><strong>B.Tech in Computer Science</strong><span>2021 – 2025</span></div>
+            <p style="color:var(--ink-500); font-size:0.85rem;">Bengaluru Institute of Technology</p>
+          </div>
+
+          <div class="resume-doc__section">
+            <h4>Skills</h4>
+            <div class="skill-tag-row">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+            </div>
+          </div>
+
+          <div class="resume-doc__section">
+            <h4>Projects</h4>
+            <div class="resume-doc__row"><strong>Student Management System</strong></div>
+            <p style="color:var(--ink-500); font-size:0.85rem;">Built a full-stack app using React, Node.js and MongoDB to manage student records and attendance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("download-resume-btn").addEventListener("click", () => window.print());
+</script>
+</body>
+</html>

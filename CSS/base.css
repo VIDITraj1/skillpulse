@@ -1,0 +1,142 @@
+:root {
+
+  --navy-950: #0b0f24;
+  --navy-900: #10152e;
+  --navy-800: #171d3d;
+  --navy-700: #232a4d;
+
+  --indigo-600: #4f46e5;
+  --indigo-500: #6357f0;
+  --indigo-400: #8a80f7;
+  --indigo-100: #ecebfd;
+
+  --teal-500: #14b8a6;
+  --teal-100: #d9f7f1;
+
+  --amber-500: #f59e0b;
+
+  --ink-900: #10142b;
+  --ink-700: #3d4260;
+  --ink-500: #6b7093;
+  --ink-300: #a4a8c3;
+
+  --paper-0: #ffffff;
+  --paper-50: #f7f7fc;
+  --paper-100: #eef0f9;
+  --paper-200: #e2e4f2;
+
+  --success-600: #16a34a;
+  --danger-600: #e0435a;
+
+  /* Type */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Radius & shadow */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-card:
+    0 1px 2px rgba(16, 20, 43, 0.04), 0 8px 24px -12px rgba(16, 20, 43, 0.12);
+  --shadow-pop: 0 20px 45px -20px rgba(79, 70, 229, 0.45);
+
+  /* Layout */
+  --sidebar-w: 248px;
+  --topbar-h: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink-900);
+  background: var(--paper-50);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--navy-950);
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 2px solid var(--indigo-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding-inline: 20px;
+  }
+}

@@ -1,0 +1,1029 @@
+.resume-page {
+    max-width: 1500px;
+}
+
+
+.resume-page-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+
+.resume-kicker {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #5b4ff5;
+
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+.resume-page-heading h1 {
+    margin-bottom: 6px;
+}
+
+
+.resume-page-heading p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #85899d;
+
+    font-size: 0.82rem;
+
+    line-height: 1.6;
+}
+
+
+.resume-heading-actions {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+
+.resume-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(420px, 0.95fr)
+        minmax(500px, 1.05fr);
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+.resume-editor,
+.resume-preview-panel,
+.ai-analysis-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 6px 24px rgba(30, 35, 80, 0.05);
+}
+
+
+.resume-editor {
+    overflow: hidden;
+}
+
+
+
+.resume-progress {
+    display: flex;
+
+    overflow-x: auto;
+
+    gap: 6px;
+
+    padding: 10px;
+
+    border-bottom: 1px solid #eef0f6;
+}
+
+
+.resume-step {
+    border: none;
+
+    background: transparent;
+
+    color: #7b8098;
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+}
+
+
+.resume-step span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    margin-right: 5px;
+
+    border-radius: 50%;
+
+    background: #f0efff;
+
+    color: #5b4ff5;
+}
+
+
+.resume-step.is-active {
+    background: #f2f1ff;
+
+    color: #4139a9;
+}
+
+
+.resume-form-section {
+    padding: 24px;
+
+    border-bottom: 1px solid #eef0f6;
+}
+
+
+.form-section-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.form-section-heading h2 {
+    margin: 3px 0 0;
+
+    color: #202338;
+
+    font-size: 1.05rem;
+}
+
+
+.section-kicker {
+    color: #5b4ff5;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+.field-hint {
+    color: #85899d;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+.resume-form-section label {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    color: #555a72;
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+}
+
+
+.resume-form-section input,
+.resume-form-section textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dfe2ec;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #25283d;
+
+    padding: 11px 12px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.82rem;
+
+    outline: none;
+
+    transition: 0.18s ease;
+}
+
+
+.resume-form-section input:focus,
+.resume-form-section textarea:focus {
+    border-color: #7770ff;
+
+    box-shadow:
+        0 0 0 3px rgba(91, 79, 245, 0.08);
+}
+
+
+.full-field {
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   SKILL TIP
+   ========================================================= */
+
+.skill-suggestion-box {
+    margin-top: 15px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: #f6f7ff;
+
+    color: #6b6f86;
+
+    font-size: 0.75rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   DYNAMIC PROJECT / EXPERIENCE
+   ========================================================= */
+
+.dynamic-item {
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #e8e9f1;
+
+    border-radius: 12px;
+
+    background: #fafaff;
+}
+
+
+.dynamic-item-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+
+.dynamic-item-header strong {
+    color: #292c42;
+
+    font-size: 0.82rem;
+}
+
+
+.remove-item {
+    border: none;
+
+    background: transparent;
+
+    color: #c04d65;
+
+    cursor: pointer;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+}
+
+
+.add-item-btn {
+    margin: 18px 24px 24px;
+
+    border: 1px dashed #bdb9ff;
+
+    background: #f7f6ff;
+
+    color: #5148c6;
+
+    border-radius: 9px;
+
+    padding: 9px 13px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PREVIEW PANEL
+   ========================================================= */
+
+.resume-preview-panel {
+    position: sticky;
+
+    top: 18px;
+
+    overflow: hidden;
+}
+
+
+.preview-toolbar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 18px;
+
+    border-bottom: 1px solid #eef0f6;
+
+    background: #fbfbfe;
+}
+
+
+.preview-toolbar strong,
+.preview-toolbar span {
+    display: block;
+}
+
+
+.preview-toolbar strong {
+    color: #292c42;
+
+    font-size: 0.8rem;
+}
+
+
+.preview-toolbar span {
+    margin-top: 3px;
+
+    color: #85899d;
+
+    font-size: 0.68rem;
+}
+
+
+.preview-status {
+    color: #16856f !important;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RESUME DOCUMENT
+   ========================================================= */
+
+.resume-document {
+    width: min(100% - 44px, 760px);
+
+    min-height: 920px;
+
+    box-sizing: border-box;
+
+    margin: 22px auto;
+
+    padding: 48px 52px;
+
+    background: #ffffff;
+
+    color: #222438;
+
+    box-shadow:
+        0 12px 35px rgba(20, 24, 55, 0.1);
+
+    font-family: Arial, sans-serif;
+}
+
+
+.resume-document-header {
+    padding-bottom: 16px;
+
+    border-bottom: 2px solid #202338;
+}
+
+
+.resume-document-header h1 {
+    margin: 0;
+
+    font-size: 2rem;
+
+    letter-spacing: -0.02em;
+}
+
+
+.resume-document-header h2 {
+    margin: 5px 0 8px;
+
+    color: #5b4ff5;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+}
+
+
+.resume-contact,
+.resume-links {
+    color: #656a80;
+
+    font-size: 0.72rem;
+
+    line-height: 1.6;
+}
+
+
+.resume-links a {
+    margin-right: 10px;
+
+    color: #5148c6;
+
+    text-decoration: none;
+}
+
+.document-section {
+    margin-top: 21px;
+}
+
+
+.document-section h3 {
+    margin: 0 0 9px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #dfe1e9;
+
+    color: #30334a;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.09em;
+}
+
+
+.document-section p {
+    margin: 0;
+
+    color: #565b70;
+
+    font-size: 0.77rem;
+
+    line-height: 1.6;
+}
+
+
+.document-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.document-row strong {
+    display: block;
+
+    font-size: 0.82rem;
+}
+
+
+.document-row span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #64697e;
+
+    font-size: 0.73rem;
+}
+
+
+.document-meta {
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+.document-meta span {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.document-skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.document-skill {
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    background: #f1f0ff;
+
+    color: #4e46b7;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PROJECT / EXPERIENCE
+   ========================================================= */
+
+.document-project,
+.document-experience {
+    margin-bottom: 13px;
+}
+
+
+.document-project:last-child,
+.document-experience:last-child {
+    margin-bottom: 0;
+}
+
+
+.document-project strong,
+.document-experience strong {
+    font-size: 0.8rem;
+}
+
+
+.project-tech,
+.experience-meta {
+    margin: 3px 0 5px;
+
+    color: #5b4ff5;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+}
+
+
+.preview-empty {
+    color: #9296a8 !important;
+}
+
+
+
+.ai-analysis-card {
+    margin-top: 22px;
+
+    padding: 24px;
+}
+
+
+.ai-analysis-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #eef0f6;
+}
+
+
+.ai-analysis-header h2 {
+    margin: 3px 0 0;
+
+    color: #202338;
+
+    font-size: 1.05rem;
+}
+
+
+.ai-analysis-header p,
+.learning-heading p {
+    margin: 6px 0 0;
+
+    color: #85899d;
+
+    font-size: 0.78rem;
+}
+
+
+
+.ai-score {
+    width: 86px;
+    height: 86px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 5px solid #dfddff;
+
+    border-radius: 50%;
+
+    background: #f3f2ff;
+}
+
+
+.ai-score span {
+    color: #5b4ff5;
+
+    font-size: 0.57rem;
+
+    font-weight: 800;
+}
+
+
+.ai-score strong {
+    color: #202338;
+
+    font-size: 1.25rem;
+
+    line-height: 1;
+}
+
+
+.ai-score small {
+    color: #85899d;
+
+    font-size: 0.55rem;
+}
+
+
+/* =========================================================
+   ANALYSIS GRID
+   ========================================================= */
+
+.ai-analysis-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 16px;
+
+    margin-top: 18px;
+}
+
+
+.analysis-panel {
+    overflow: hidden;
+
+    border: 1px solid #e7e8f0;
+
+    border-radius: 12px;
+}
+
+
+.analysis-panel h3 {
+    margin: 0;
+
+    padding: 13px 15px;
+
+    border-bottom: 1px solid #eef0f6;
+
+    color: #292c42;
+
+    font-size: 0.8rem;
+}
+
+
+.analysis-content,
+.skill-gap-list {
+    padding: 15px;
+}
+
+
+.analysis-empty {
+    padding: 20px;
+
+    border-radius: 9px;
+
+    background: #fafaff;
+
+    color: #85899d;
+
+    text-align: center;
+
+    font-size: 0.75rem;
+
+    line-height: 1.55;
+}
+
+
+.feedback-list {
+    margin: 0;
+
+    padding-left: 18px;
+
+    color: #555a72;
+
+    font-size: 0.76rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SKILL GAP
+   ========================================================= */
+
+.gap-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #f0f1f6;
+}
+
+
+.gap-item:last-child {
+    border-bottom: none;
+}
+
+
+.gap-skill {
+    color: #292c42;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+}
+
+
+.gap-label {
+    padding: 4px 7px;
+
+    border-radius: 6px;
+
+    background: #fff5f5;
+
+    color: #bd4b5d;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LEARNING RECOMMENDATIONS
+   ========================================================= */
+
+.learning-section {
+    margin-top: 22px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #eef0f6;
+}
+
+
+.learning-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-top: 15px;
+}
+
+
+.learning-card {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 175px;
+
+    padding: 16px;
+
+    border: 1px solid #e5e7f0;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+
+.learning-source {
+    color: #5b4ff5;
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+
+.learning-card h3 {
+    margin: 7px 0 6px;
+
+    color: #292c42;
+
+    font-size: 0.82rem;
+}
+
+
+.learning-card p {
+    flex: 1;
+
+    margin: 0;
+
+    color: #85899d;
+
+    font-size: 0.7rem;
+
+    line-height: 1.5;
+}
+
+
+.learning-card a {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b4ff5,
+            #14b8a6
+        );
+
+    color: #ffffff;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+}
+
+
+.learning-empty {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .resume-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resume-preview-panel {
+        position: static;
+    }
+
+
+    .learning-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .resume-page-heading,
+    .ai-analysis-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .form-grid,
+    .ai-analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resume-document {
+        width: calc(100% - 20px);
+
+        padding: 30px 25px;
+    }
+
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media print {
+
+    body {
+        background: #ffffff !important;
+    }
+
+
+    #sidebar-root,
+    #topbar-root,
+    .resume-page-heading,
+    .resume-editor,
+    .preview-toolbar,
+    .ai-analysis-card {
+        display: none !important;
+    }
+
+
+    .resume-preview-panel {
+        display: block !important;
+
+        border: 0 !important;
+
+        box-shadow: none !important;
+    }
+
+
+    .resume-document {
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        margin: 0 !important;
+
+        box-shadow: none !important;
+    }
+
+}

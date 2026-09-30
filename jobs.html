@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs — SkillPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/topbar.css">
+  <link rel="stylesheet" href="css/dashboard-cards.css">
+  <link rel="stylesheet" href="css/jobs.css">
+</head>
+
+<body data-page="jobs">
+
+  <div class="app-shell">
+    <div id="sidebar-root"></div>
+
+    <div class="app-main">
+      <div id="topbar-root"></div>
+
+      <div class="page-body">
+        <div class="jobs-hero">
+          <h1>Find Full-Time Roles</h1>
+          <p>Graduate jobs and early-career roles from companies hiring right now.</p>
+          <div class="jobs-hero__bar">
+            <input type="text" placeholder="Job title, company, or skills" data-search-input>
+            <select>
+              <option>Any location</option>
+              <option>Remote</option>
+              <option>Bengaluru</option>
+              <option>Mumbai</option>
+              <option>Hyderabad</option>
+            </select>
+            <button class="btn btn--primary">Search</button>
+          </div>
+        </div>
+
+        <div class="jobs-toolbar">
+          <span class="jobs-toolbar__count">4 jobs found</span>
+          <div class="jobs-toolbar__sort">
+            Sort by
+            <select>
+              <option>Most relevant</option>
+              <option>Newest</option>
+              <option>Salary: high to low</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="job-list">
+          <div class="job-card" data-searchable>
+            <div class="job-card__top">
+              <div class="job-card__logo">G</div>
+              <div class="job-card__info">
+                <div class="job-card__title">Associate Software Engineer</div>
+                <div class="job-card__company">Google · Bengaluru</div>
+              </div>
+              <button class="job-card__save" data-save-btn>☆</button>
+            </div>
+            <div class="job-card__tags">
+              <span class="job-tag">Full-time</span>
+              <span class="job-tag job-tag--experience">0–1 yrs experience</span>
+              <span class="job-tag job-tag--salary">₹12–16 LPA</span>
+            </div>
+            <div class="job-card__foot">
+              <span class="job-card__posted">Posted 2 days ago</span>
+              <button class="btn btn--primary" data-apply-btn>Apply</button>
+            </div>
+          </div>
+
+          <div class="job-card" data-searchable>
+            <div class="job-card__top">
+              <div class="job-card__logo">A</div>
+              <div class="job-card__info">
+                <div class="job-card__title">Backend Developer</div>
+                <div class="job-card__company">Amazon · Hyderabad</div>
+              </div>
+              <button class="job-card__save" data-save-btn>☆</button>
+            </div>
+            <div class="job-card__tags">
+              <span class="job-tag">Full-time</span>
+              <span class="job-tag job-tag--experience">1–2 yrs experience</span>
+              <span class="job-tag job-tag--salary">₹14–18 LPA</span>
+            </div>
+            <div class="job-card__foot">
+              <span class="job-card__posted">Posted 4 days ago</span>
+              <button class="btn btn--primary" data-apply-btn>Apply</button>
+            </div>
+          </div>
+
+          <div class="job-card" data-searchable>
+            <div class="job-card__top">
+              <div class="job-card__logo">M</div>
+              <div class="job-card__info">
+                <div class="job-card__title">Product Analyst</div>
+                <div class="job-card__company">Microsoft · Remote</div>
+              </div>
+              <button class="job-card__save" data-save-btn>☆</button>
+            </div>
+            <div class="job-card__tags">
+              <span class="job-tag">Full-time</span>
+              <span class="job-tag job-tag--experience">0–1 yrs experience</span>
+              <span class="job-tag job-tag--salary">₹10–13 LPA</span>
+            </div>
+            <div class="job-card__foot">
+              <span class="job-card__posted">Posted 6 days ago</span>
+              <button class="btn btn--primary" data-apply-btn>Apply</button>
+            </div>
+          </div>
+
+          <div class="job-card" data-searchable>
+            <div class="job-card__top">
+              <div class="job-card__logo">T</div>
+              <div class="job-card__info">
+                <div class="job-card__title">UI/UX Designer</div>
+                <div class="job-card__company">TCS · Mumbai</div>
+              </div>
+              <button class="job-card__save" data-save-btn>☆</button>
+            </div>
+            <div class="job-card__tags">
+              <span class="job-tag">Full-time</span>
+              <span class="job-tag job-tag--experience">1–3 yrs experience</span>
+              <span class="job-tag job-tag--salary">₹8–11 LPA</span>
+            </div>
+            <div class="job-card__foot">
+              <span class="job-card__posted">Posted 1 week ago</span>
+              <button class="btn btn--primary" data-apply-btn>Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

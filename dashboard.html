@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Dashboard — SkillPulse</title>
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/base.css">
+
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <link rel="stylesheet" href="css/topbar.css">
+
+    <link rel="stylesheet" href="css/dashboard-cards.css">
+
+</head>
+
+
+<body data-page="dashboard">
+
+
+<div class="app-shell">
+
+
+
+    <div id="sidebar-root"></div>
+
+
+
+
+
+    <div class="app-main">
+
+
+        <!-- TOPBAR -->
+
+        <div id="topbar-root"></div>
+
+
+
+
+        <main class="page-body">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>
+                        Hello,
+                        <span id="dashboardUsername">
+                            User
+                        </span>
+                        👋
+                    </h1>
+
+
+                    <p>
+                        Keep going! Your skills and efforts are
+                        building a better future.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 DASHBOARD GRID
+                 ===================================== -->
+
+            <div class="dash-grid">
+
+
+                <!-- =================================
+                     LEFT COLUMN
+                     ================================= -->
+
+                <div class="dash-col">
+
+
+                    <!-- CAREER READINESS -->
+
+                    <div
+                        class="card readiness-card"
+                        style="margin-bottom:20px;"
+                    >
+
+                        <div class="readiness-ring">
+
+                            <svg viewBox="0 0 100 100">
+
+                                <circle
+                                    class="readiness-ring__track"
+                                    cx="50"
+                                    cy="50"
+                                    r="42"
+                                    fill="none"
+                                    stroke-width="9"
+                                ></circle>
+
+
+                                <circle
+                                    class="readiness-ring__value"
+                                    data-value="72"
+                                    cx="50"
+                                    cy="50"
+                                    r="42"
+                                    fill="none"
+                                    stroke-width="9"
+                                ></circle>
+
+                            </svg>
+
+
+                            <div
+                                class="readiness-ring__num"
+                                id="readinessNumber"
+                            >
+                                0%
+                            </div>
+
+                        </div>
+
+
+                        <div class="readiness-info">
+
+                            <h3>
+                                Career Readiness
+                            </h3>
+
+
+                            <p>
+
+                                <span class="trend">
+                                    Getting started
+                                </span>
+
+                                — complete your profile and
+                                assessments to improve your score.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- METRICS -->
+
+                    <div
+                        class="metric-row"
+                        style="margin-bottom:20px;"
+                    >
+
+                        <div class="metric-tile">
+
+                            <div class="metric-tile__num">
+                                0
+                            </div>
+
+                            <div class="metric-tile__label">
+                                Skill gaps
+                            </div>
+
+                        </div>
+
+
+                        <div class="metric-tile">
+
+                            <div class="metric-tile__num">
+                                0
+                            </div>
+
+                            <div class="metric-tile__label">
+                                Recommended internships
+                            </div>
+
+                        </div>
+
+
+                        <div class="metric-tile">
+
+                            <div class="metric-tile__num">
+                                0
+                            </div>
+
+                            <div class="metric-tile__label">
+                                Applications
+                            </div>
+
+                        </div>
+
+
+                        <div class="metric-tile">
+
+                            <div class="metric-tile__num">
+                                0
+                            </div>
+
+                            <div class="metric-tile__label">
+                                Projects
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RECOMMENDED INTERNSHIPS -->
+
+                    <div class="card">
+
+                        <div class="card__header">
+
+                            <span class="card__title">
+                                Recommended Internships
+                            </span>
+
+
+                            <a
+                                href="internships.html"
+                                class="card__link"
+                            >
+                                View all
+                            </a>
+
+                        </div>
+
+
+                        <div class="card__body">
+
+
+                            <div
+                                class="internship-row"
+                                data-searchable
+                            >
+
+                                <div class="internship-row__logo">
+                                    G
+                                </div>
+
+
+                                <div class="internship-row__info">
+
+                                    <div class="internship-row__title">
+
+                                        Frontend Developer Intern
+                                        — Google
+
+                                    </div>
+
+
+                                    <div class="internship-row__meta">
+
+                                        <span>
+                                            Remote
+                                        </span>
+
+                                        <span>
+                                            6 months
+                                        </span>
+
+                                        <span>
+                                            ₹30k/month
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="match-badge">
+                                    82% match
+                                </span>
+
+
+                                <button
+                                    class="btn btn--primary"
+                                    data-apply-btn
+                                >
+                                    Apply
+                                </button>
+
+                            </div>
+
+
+
+                            <div
+                                class="internship-row"
+                                data-searchable
+                            >
+
+                                <div class="internship-row__logo">
+                                    M
+                                </div>
+
+
+                                <div class="internship-row__info">
+
+                                    <div class="internship-row__title">
+
+                                        Full Stack Developer Intern
+                                        — Microsoft
+
+                                    </div>
+
+
+                                    <div class="internship-row__meta">
+
+                                        <span>
+                                            Bengaluru
+                                        </span>
+
+                                        <span>
+                                            3 months
+                                        </span>
+
+                                        <span>
+                                            ₹25k/month
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="match-badge">
+                                    76% match
+                                </span>
+
+
+                                <button
+                                    class="btn btn--primary"
+                                    data-apply-btn
+                                >
+                                    Apply
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     RIGHT COLUMN
+                     ================================= -->
+
+                <div
+                    class="dash-col"
+                    style="
+                        display:flex;
+                        flex-direction:column;
+                        gap:20px;
+                    "
+                >
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="card quick-actions">
+
+                        <span class="card__title">
+                            Quick Actions
+                        </span>
+
+
+                        <div class="quick-actions__row">
+
+                            <a
+                                href="#"
+                                class="action-pill"
+                            >
+
+                                <span class="ico">
+                                    🧪
+                                </span>
+
+                                Take Skill Assessment
+
+                            </a>
+
+
+                            <a
+                                href="internships.html"
+                                class="action-pill is-accent"
+                            >
+
+                                <span class="ico">
+                                    🔎
+                                </span>
+
+                                Explore Internships
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="quick-actions__row">
+
+                            <a
+                                href="projects.html"
+                                class="action-pill"
+                            >
+
+                                <span class="ico">
+                                    📁
+                                </span>
+
+                                Build a Project
+
+                            </a>
+
+
+                            <a
+                                href="community.html"
+                                class="action-pill"
+                            >
+
+                                <span class="ico">
+                                    👥
+                                </span>
+
+                                Join a Community
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- BANNER -->
+
+                    <div class="banner-card">
+
+                        <div>
+
+                            <h3>
+                                Small steps every day
+                                lead to big results!
+                            </h3>
+
+
+                            <p>
+                                Stay consistent — your dream
+                                job is closer than you think.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NEXT TASK -->
+
+                    <div class="card next-task-card">
+
+                        <span class="card__title">
+                            Your Next Task
+                        </span>
+
+
+                        <div>
+
+                            <div
+                                class="internship-row__title"
+                                style="margin-bottom:4px;"
+                            >
+                                Complete JavaScript Assessment
+                            </div>
+
+
+                            <div class="next-task-card__meta">
+                                Estimated time: 20 mins
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="btn btn--primary"
+                        >
+                            Start now
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
+
+<script src="js/layout.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>

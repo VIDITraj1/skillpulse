@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Roadmap — SkillPulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/topbar.css">
+<link rel="stylesheet" href="css/dashboard-cards.css">
+<link rel="stylesheet" href="css/roadmap.css">
+</head>
+<body data-page="roadmap">
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="app-main">
+    <div id="topbar-root"></div>
+
+    <div class="page-body">
+      <div class="roadmap-toolbar">
+        <div>
+          <h1 style="font-size:1.4rem;">Career Roadmap</h1>
+          <p style="color:var(--ink-500); font-size:0.9rem; margin-top:4px;">Choose your goal and get a personalized roadmap.</p>
+        </div>
+        <div class="role-select">Full Stack Developer <span>▾</span></div>
+      </div>
+
+      <div class="roadmap-track">
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#e05d2b;">🌐 HTML</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#2965f1;">🎨 CSS</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#e8b800;">JS JavaScript</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#149ddb;">⚛️ React</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#3c873a;">⬢ Node.js</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#4f46e5;">🗄️ Database</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#0f9d8c;">🔗 REST API</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#d1436a;">📁 Projects</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#7a4fe0;">💼 Internship</span></div>
+        <div class="roadmap-node__connector"></div>
+        <div class="roadmap-node"><span class="roadmap-node__pill" style="background:#1c2340;">🎯 Job</span></div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="roadmap-progress">
+          <div class="roadmap-progress__header">
+            <span class="card__title">Your Progress</span>
+            <span class="roadmap-progress__fraction">4/9 stages</span>
+          </div>
+
+          <p style="font-size:0.85rem; font-weight:600; color:var(--ink-700); margin-bottom:6px;">Recommended Next Steps</p>
+          <div class="step-check-row">
+            <span class="step-check-row__tick">✓</span>
+            <span class="step-check-row__label">Learn React Hooks (2–3 hrs)</span>
+            <span>›</span>
+          </div>
+          <div class="step-check-row">
+            <span class="step-check-row__tick is-pending">2</span>
+            <span class="step-check-row__label">Build a small React project</span>
+            <span>›</span>
+          </div>
+          <div class="step-check-row">
+            <span class="step-check-row__tick is-pending">3</span>
+            <span class="step-check-row__label">Complete Git &amp; GitHub assessment</span>
+            <span>›</span>
+          </div>
+          <a href="#" class="card__link" style="display:inline-block; margin-top:14px;">View full roadmap →</a>
+        </div>
+
+        <div class="banner-card">
+          <div>
+            <h3>You're on the right path!</h3>
+            <p>Keep learning and building. Your dream job is closer than you think.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

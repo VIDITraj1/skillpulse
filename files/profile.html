@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile — SkillPulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/topbar.css">
+<link rel="stylesheet" href="css/dashboard-cards.css">
+<link rel="stylesheet" href="css/profile.css">
+</head>
+<body data-page="profile">
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="app-main">
+    <div id="topbar-root"></div>
+
+    <div class="page-body">
+      <div class="profile-cover">
+        <div class="profile-cover__card">
+          <img src="https://i.pravatar.cc/160?img=47" alt="Priya Sharma">
+          <div>
+            <div class="profile-cover__name">Priya Sharma</div>
+            <div class="profile-cover__role">Full Stack Developer · B.Tech CSE</div>
+          </div>
+          <button class="btn btn--primary">Edit Profile</button>
+        </div>
+      </div>
+
+      <div class="profile-stats-row">
+        <div class="metric-tile"><div class="metric-tile__num">12</div><div class="metric-tile__label">Projects</div></div>
+        <div class="metric-tile"><div class="metric-tile__num">8</div><div class="metric-tile__label">Internships Applied</div></div>
+        <div class="metric-tile"><div class="metric-tile__num">5</div><div class="metric-tile__label">Certifications</div></div>
+        <div class="metric-tile"><div class="metric-tile__num">3</div><div class="metric-tile__label">Achievements</div></div>
+        <div class="metric-tile"><div class="metric-tile__num">72%</div><div class="metric-tile__label">Career Readiness</div></div>
+      </div>
+
+      <div class="profile-layout">
+        <div class="card">
+          <div class="card__header"><span class="card__title">Skill Badges</span></div>
+          <div class="card__body">
+            <div class="badge-grid">
+              <span class="badge-chip">🟨 JavaScript</span>
+              <span class="badge-chip">⚛️ React</span>
+              <span class="badge-chip">⬢ Node.js</span>
+              <span class="badge-chip">🗄️ MongoDB</span>
+              <span class="badge-chip">📌 Git</span>
+              <span class="badge-chip">🧩 Problem Solving</span>
+              <span class="badge-chip">💬 Communication</span>
+              <span class="badge-chip">🤝 Teamwork</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header"><span class="card__title">Recent Activity</span></div>
+          <div class="card__body">
+            <div class="activity-row">
+              <span class="activity-row__ico">✅</span>
+              <div><div class="activity-row__text">Completed JavaScript assessment · Score 84%</div><div class="activity-row__time">2 days ago</div></div>
+            </div>
+            <div class="activity-row">
+              <span class="activity-row__ico">👥</span>
+              <div><div class="activity-row__text">Joined Web Development community</div><div class="activity-row__time">3 days ago</div></div>
+            </div>
+            <div class="activity-row">
+              <span class="activity-row__ico">📁</span>
+              <div><div class="activity-row__text">Posted a project — Campus Event App</div><div class="activity-row__time">5 days ago</div></div>
+            </div>
+            <div class="activity-row">
+              <span class="activity-row__ico">🏆</span>
+              <div><div class="activity-row__text">Earned React badge</div><div class="activity-row__time">6 days ago</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

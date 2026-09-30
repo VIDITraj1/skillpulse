@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — SkillPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <style>
+    .auth-main {
+      display: flex;
+      align-items: center;
+    }
+
+    .auth-main__inner.is-narrow {
+      max-width: 420px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="auth-shell">
+
+    <aside class="auth-aside">
+      <div>
+        <div class="auth-aside__brand">
+          <span class="logo-mark"><img src="img/logo-img.png" alt=""></span> SkillPulse
+        </div>
+        <div class="auth-aside__tagline">Learn · Build · Grow · Get Hired</div>
+      </div>
+
+      <h1 class="auth-aside__heading">Welcome Back.<br>Keep <span class="accent">Building</span> Forward.</h1>
+      <p class="auth-aside__lede">Log in to pick up where you left off — your roadmap, applications and projects are
+        waiting.</p>
+
+      <div class="auth-feature-list">
+        <div class="auth-feature">
+          <span class="auth-feature__ico">💼</span>
+          <div>
+            <div class="auth-feature__title">Find Opportunities</div>
+            <div class="auth-feature__desc">Internships, jobs and more</div>
+          </div>
+        </div>
+        <div class="auth-feature">
+          <span class="auth-feature__ico">📖</span>
+          <div>
+            <div class="auth-feature__title">Learn &amp; Upskill</div>
+            <div class="auth-feature__desc">Curated resources and courses</div>
+          </div>
+        </div>
+        <div class="auth-feature">
+          <span class="auth-feature__ico">🚀</span>
+          <div>
+            <div class="auth-feature__title">Grow Your Career</div>
+            <div class="auth-feature__desc">Get noticed by top companies</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="auth-aside__quote">
+      <div>
+        कौशल पहचानें, भविष्या सवारे।
+      </div>
+      <div>
+        Identify skills, shape the future.
+      </div>
+      </p>
+    </aside>
+
+    <main class="auth-main">
+      <div class="auth-main__inner is-narrow">
+        <h1>Welcome Back</h1>
+        <p class="auth-main__sub">Log in to continue your journey on SkillPulse</p>
+
+        <form data-login-form novalidate style="margin-top:30px;">
+          <section class="auth-section">
+            <div class="field full" style="margin-bottom:16px;">
+              <label>Email Address <span class="req">*</span></label>
+              <div class="field-input">
+                <span class="fi-ico">✉️</span>
+                <input type="email" name="email" placeholder="Enter your email address" required>
+              </div>
+              <span class="field-error">Please enter a valid email.</span>
+            </div>
+
+            <div class="field full">
+              <label>Password <span class="req">*</span></label>
+              <div class="field-input">
+                <span class="fi-ico">🔒</span>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <button type="button" class="fi-toggle" data-toggle-password>👁️</button>
+              </div>
+              <span class="field-error">Please enter your password.</span>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+              <label style="display:flex; align-items:center; gap:8px; font-size:0.84rem; color:var(--ink-300);">
+                <input type="checkbox"> Remember me
+              </label>
+              <a href="#" style="font-size:0.84rem; color:var(--indigo-400); font-weight:600;">Forgot password?</a>
+            </div>
+          </section>
+
+          <button type="submit" class="auth-submit-btn">Log In</button>
+          <p class="auth-footnote">Don't have an account? <a href="signup.html">Create one</a></p>
+        </form>
+      </div>
+    </main>
+  </div>
+
+<script src="js/login.js"></script>
+</body>
+
+</html>

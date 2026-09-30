@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Workspace — SkillPulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/topbar.css">
+<link rel="stylesheet" href="css/dashboard-cards.css">
+<link rel="stylesheet" href="css/project-collab.css">
+</head>
+<body data-page="projects">
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="app-main">
+    <div id="topbar-root"></div>
+
+    <div class="page-body">
+      <div class="workspace-header">
+        <div class="workspace-header__top">
+          <h1 style="font-size:1.25rem;">Campus Event Management System</h1>
+          <span class="status-pill">In Progress</span>
+        </div>
+        <div class="workspace-tabs" data-tabs="#workspace-panels">
+          <button data-tab-btn="overview" class="is-active">Overview</button>
+          <button data-tab-btn="tasks">Tasks</button>
+          <button data-tab-btn="members">Members</button>
+          <button data-tab-btn="files">Files</button>
+          <button data-tab-btn="discussion">Discussion</button>
+        </div>
+      </div>
+
+      <div id="workspace-panels" class="workspace-grid">
+        <div data-tab-panel="overview" class="is-active">
+          <div class="card">
+            <div class="card__body">
+              <div class="detail-block">
+                <h4>Project Details</h4>
+                <p>A web application to manage college events, registrations, and notifications.</p>
+              </div>
+              <div class="detail-block">
+                <h4>Team Members (3/5)</h4>
+                <div class="team-avatars">
+                  <img src="https://i.pravatar.cc/64?img=12" alt="">
+                  <img src="https://i.pravatar.cc/64?img=32" alt="">
+                  <img src="https://i.pravatar.cc/64?img=15" alt="">
+                  <span class="avatar-add">+</span>
+                </div>
+              </div>
+              <div class="detail-block">
+                <h4>Looking for</h4>
+                <p style="margin-bottom:10px;">Backend Developer</p>
+                <button class="btn btn--primary">Find Teammates</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__header"><span class="card__title">Progress</span><span class="match-badge">70%</span></div>
+            <div class="card__body">
+              <span class="card__title" style="display:block; font-size:0.85rem; margin-bottom:10px;">Tasks</span>
+              <div class="task-row is-done"><span class="task-row__dot"></span> Design homepage</div>
+              <div class="task-row is-done"><span class="task-row__dot"></span> Create database</div>
+              <div class="task-row"><span class="task-row__dot"></span> Build login</div>
+              <div class="task-row"><span class="task-row__dot"></span> Deploy application</div>
+
+              <p style="margin-top:16px; font-size:0.85rem; font-weight:600; color:var(--ink-700);">Team Chat</p>
+              <div class="chat-panel" style="height:220px; margin-top:10px;">
+                <div class="chat-log" data-chat-log>
+                  <div class="chat-msg">
+                    <img class="chat-msg__avatar" src="https://i.pravatar.cc/64?img=12" alt="">
+                    <div><div class="chat-msg__name">Riya</div><p>I've completed the UI design. Check it out!</p></div>
+                  </div>
+                  <div class="chat-msg">
+                    <img class="chat-msg__avatar" src="https://i.pravatar.cc/64?img=15" alt="">
+                    <div><div class="chat-msg__name">Aman</div><p>Great! I'll work on the backend APIs next.</p></div>
+                  </div>
+                  <div class="chat-msg chat-msg--me">
+                    <img class="chat-msg__avatar" src="https://i.pravatar.cc/64?img=47" alt="">
+                    <div><div class="chat-msg__name">You</div><p>Sounds good. Let's sync tonight.</p></div>
+                  </div>
+                </div>
+                <div class="chat-input-row">
+                  <input type="text" placeholder="Type a message…" data-chat-input>
+                  <button class="btn btn--primary" data-chat-send>Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab-panel="tasks">
+          <div class="card" style="grid-column: 1 / -1;">
+            <div class="card__body">
+              <div class="task-row is-done"><span class="task-row__dot"></span> Design homepage</div>
+              <div class="task-row is-done"><span class="task-row__dot"></span> Create database</div>
+              <div class="task-row"><span class="task-row__dot"></span> Build login</div>
+              <div class="task-row"><span class="task-row__dot"></span> Build event registration form</div>
+              <div class="task-row"><span class="task-row__dot"></span> Deploy application</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab-panel="members">
+          <div class="card" style="grid-column: 1 / -1;">
+            <div class="card__body">
+              <div class="people-row" style="padding:10px 0;"><img src="https://i.pravatar.cc/64?img=12" style="width:38px;height:38px;border-radius:50%;" alt=""><div><div class="internship-row__title">Riya Shah</div><div class="internship-row__meta">Frontend / UI Design</div></div></div>
+              <div class="people-row" style="padding:10px 0;"><img src="https://i.pravatar.cc/64?img=15" style="width:38px;height:38px;border-radius:50%;" alt=""><div><div class="internship-row__title">Aman Gupta</div><div class="internship-row__meta">Backend Developer</div></div></div>
+              <div class="people-row" style="padding:10px 0;"><img src="https://i.pravatar.cc/64?img=47" style="width:38px;height:38px;border-radius:50%;" alt=""><div><div class="internship-row__title">Priya Sharma (You)</div><div class="internship-row__meta">Full Stack Developer</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab-panel="files">
+          <div class="card" style="grid-column: 1 / -1;"><div class="card__body"><p style="color:var(--ink-500); font-size:0.9rem;">No files uploaded yet. Share design files, docs, or slides with your team here.</p></div></div>
+        </div>
+
+        <div data-tab-panel="discussion">
+          <div class="card" style="grid-column: 1 / -1;"><div class="card__body"><p style="color:var(--ink-500); font-size:0.9rem;">Start a thread to discuss project direction with your team.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

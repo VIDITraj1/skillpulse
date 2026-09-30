@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Builder — SkillPulse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/dashboard-cards.css">
+
+    <link rel="stylesheet" href="css/resume-builder.css">
+</head>
+
+
+<body data-page="resume">
+
+<div class="app-shell">
+
+    <div id="sidebar-root"></div>
+
+
+    <div class="app-main">
+
+        <div id="topbar-root"></div>
+
+
+
+        <main class="page-body resume-page">
+
+
+
+
+            <div class="page-heading resume-page-heading">
+
+                <div>
+
+                    <span class="resume-kicker">
+                        AI CAREER TOOLS
+                    </span>
+
+                    <h1>
+                        Build Your Professional Resume
+                    </h1>
+
+                    <p>
+                        Create your resume, analyze it with AI,
+                        identify skill gaps and discover what to learn next.
+                    </p>
+
+                </div>
+
+
+                <div class="resume-heading-actions">
+
+                    <button
+                        class="btn btn--secondary"
+                        id="analyze-resume-btn"
+                    >
+                        ✨ Analyze with AI
+                    </button>
+
+
+                    <button
+                        class="btn btn--primary"
+                        id="download-resume-btn"
+                    >
+                        Download PDF
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="resume-layout">
+
+
+
+                <section class="resume-editor">
+
+
+
+                    <div class="resume-progress">
+
+                        <button
+                            class="resume-step is-active"
+                            data-section="personal"
+                        >
+                            <span>1</span>
+                            Personal
+                        </button>
+
+
+                        <button
+                            class="resume-step"
+                            data-section="education"
+                        >
+                            <span>2</span>
+                            Education
+                        </button>
+
+
+                        <button
+                            class="resume-step"
+                            data-section="skills"
+                        >
+                            <span>3</span>
+                            Skills
+                        </button>
+
+
+                        <button
+                            class="resume-step"
+                            data-section="projects"
+                        >
+                            <span>4</span>
+                            Projects
+                        </button>
+
+
+                        <button
+                            class="resume-step"
+                            data-section="experience"
+                        >
+                            <span>5</span>
+                            Experience
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- FORM -->
+
+                    <form id="resume-form">
+
+
+                        <section
+                            class="resume-form-section"
+                            data-form-section="personal"
+                        >
+
+                            <div class="form-section-heading">
+
+                                <div>
+
+                                    <span class="section-kicker">
+                                        01
+                                    </span>
+
+                                    <h2>
+                                        Personal Details
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-grid">
+
+
+                                <label>
+
+                                    Full Name
+
+                                    <input
+                                        name="name"
+                                        type="text"
+                                        placeholder="Your full name"
+                                        required
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    Professional Role
+
+                                    <input
+                                        name="role"
+                                        type="text"
+                                        placeholder="e.g. Full Stack Developer"
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    Email
+
+                                    <input
+                                        name="email"
+                                        type="email"
+                                        placeholder="you@example.com"
+                                        required
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    Phone
+
+                                    <input
+                                        name="phone"
+                                        type="text"
+                                        placeholder="+91 XXXXX XXXXX"
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    Location
+
+                                    <input
+                                        name="location"
+                                        type="text"
+                                        placeholder="Bhopal, India"
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    LinkedIn
+
+                                    <input
+                                        name="linkedin"
+                                        type="url"
+                                        placeholder="https://linkedin.com/in/..."
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    GitHub
+
+                                    <input
+                                        name="github"
+                                        type="url"
+                                        placeholder="https://github.com/..."
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    Portfolio
+
+                                    <input
+                                        name="portfolio"
+                                        type="url"
+                                        placeholder="https://..."
+                                    >
+
+                                </label>
+
+                            </div>
+
+
+                            <label class="full-field">
+
+                                Professional Summary
+
+                                <textarea
+                                    name="summary"
+                                    rows="5"
+                                    placeholder="Write a short professional summary. AI can help improve it."
+                                ></textarea>
+
+                            </label>
+
+                        </section>
+
+
+
+                        <!-- =================================================
+                             EDUCATION
+                        ================================================== -->
+
+                        <section
+                            class="resume-form-section"
+                            data-form-section="education"
+                        >
+
+                            <div class="form-section-heading">
+
+                                <div>
+
+                                    <span class="section-kicker">
+                                        02
+                                    </span>
+
+                                    <h2>
+                                        Education
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-grid">
+
+
+                                <label>
+
+                                    Highest Qualification
+
+                                    <input
+                                        name="qualification"
+                                        type="text"
+                                        placeholder="B.Tech"
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    Degree
+
+                                    <input
+                                        name="degree"
+                                        type="text"
+                                        placeholder="B.Tech / Computer Science"
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    Branch
+
+                                    <input
+                                        name="branch"
+                                        type="text"
+                                        placeholder="AIML"
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    College / University
+
+                                    <input
+                                        name="college"
+                                        type="text"
+                                        placeholder="College name"
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    Graduation Year
+
+                                    <input
+                                        name="graduationYear"
+                                        type="text"
+                                        placeholder="2028"
+                                    >
+
+                                </label>
+
+
+                                <label>
+
+                                    CGPA
+
+                                    <input
+                                        name="cgpa"
+                                        type="text"
+                                        placeholder="8.1"
+                                    >
+
+                                </label>
+
+                            </div>
+
+                        </section>
+
+
+
+                        <!-- =================================================
+                             SKILLS
+                        ================================================== -->
+
+                        <section
+                            class="resume-form-section"
+                            data-form-section="skills"
+                        >
+
+                            <div class="form-section-heading">
+
+                                <div>
+
+                                    <span class="section-kicker">
+                                        03
+                                    </span>
+
+                                    <h2>
+                                        Skills
+                                    </h2>
+
+                                </div>
+
+                                <span class="field-hint">
+                                    Separate skills using commas
+                                </span>
+
+                            </div>
+
+
+                            <label class="full-field">
+
+                                Technical Skills
+
+                                <textarea
+                                    name="skills"
+                                    rows="5"
+                                    placeholder="JavaScript, React, Node.js, MongoDB, Python, SQL, Git"
+                                ></textarea>
+
+                            </label>
+
+
+                            <div class="skill-suggestion-box">
+
+                                <strong>
+                                    Tip:
+                                </strong>
+
+                                Add only skills you actually know.
+                                SkillPulse will identify missing skills
+                                instead of inventing them.
+
+                            </div>
+
+                        </section>
+
+
+
+                        <!-- =================================================
+                             PROJECTS
+                        ================================================== -->
+
+                        <section
+                            class="resume-form-section"
+                            data-form-section="projects"
+                        >
+
+                            <div class="form-section-heading">
+
+                                <div>
+
+                                    <span class="section-kicker">
+                                        04
+                                    </span>
+
+                                    <h2>
+                                        Projects
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="projects-container"></div>
+
+
+                            <button
+                                type="button"
+                                class="add-item-btn"
+                                id="add-project-btn"
+                            >
+                                + Add Project
+                            </button>
+
+                        </section>
+
+
+
+                        <!-- =================================================
+                             EXPERIENCE
+                        ================================================== -->
+
+                        <section
+                            class="resume-form-section"
+                            data-form-section="experience"
+                        >
+
+                            <div class="form-section-heading">
+
+                                <div>
+
+                                    <span class="section-kicker">
+                                        05
+                                    </span>
+
+                                    <h2>
+                                        Experience / Internship
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="experience-container"></div>
+
+
+                            <button
+                                type="button"
+                                class="add-item-btn"
+                                id="add-experience-btn"
+                            >
+                                + Add Experience
+                            </button>
+
+                        </section>
+
+
+                    </form>
+
+                </section>
+
+
+
+                <!-- =====================================================
+                     RIGHT SIDE — LIVE RESUME
+                ====================================================== -->
+
+                <section class="resume-preview-panel">
+
+
+                    <div class="preview-toolbar">
+
+                        <div>
+
+                            <strong>
+                                Live Resume Preview
+                            </strong>
+
+                            <span>
+                                Your resume updates as you type.
+                            </span>
+
+                        </div>
+
+
+                        <span
+                            class="preview-status"
+                            id="preview-status"
+                        >
+                            Ready
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- ACTUAL RESUME -->
+
+                    <article
+                        class="resume-document"
+                        id="resume-document"
+                    >
+
+
+                        <!-- HEADER -->
+
+                        <header class="resume-document-header">
+
+                            <h1 id="preview-name">
+                                Your Name
+                            </h1>
+
+
+                            <h2 id="preview-role">
+                                Professional Role
+                            </h2>
+
+
+                            <div
+                                class="resume-contact"
+                                id="preview-contact"
+                            >
+                                email@example.com · Phone · City
+                            </div>
+
+
+                            <div
+                                class="resume-links"
+                                id="preview-links"
+                            ></div>
+
+                        </header>
+
+
+
+                        <!-- SUMMARY -->
+
+                        <section
+                            class="document-section"
+                            id="preview-summary-section"
+                        >
+
+                            <h3>
+                                PROFILE
+                            </h3>
+
+
+                            <p id="preview-summary">
+                                Add a professional summary to see it here.
+                            </p>
+
+                        </section>
+
+
+
+                        <!-- EDUCATION -->
+
+                        <section class="document-section">
+
+                            <h3>
+                                EDUCATION
+                            </h3>
+
+
+                            <div class="document-row">
+
+                                <div>
+
+                                    <strong
+                                        id="preview-qualification"
+                                    >
+                                        B.Tech
+                                    </strong>
+
+
+                                    <span
+                                        id="preview-education-details"
+                                    >
+                                        Degree · Branch · College
+                                    </span>
+
+                                </div>
+
+
+                                <div class="document-meta">
+
+                                    <span
+                                        id="preview-graduation"
+                                    >
+                                        2028
+                                    </span>
+
+
+                                    <span
+                                        id="preview-cgpa"
+                                    >
+                                        CGPA: —
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+
+                        <!-- SKILLS -->
+
+                        <section class="document-section">
+
+                            <h3>
+                                SKILLS
+                            </h3>
+
+
+                            <div
+                                class="document-skills"
+                                id="preview-skills"
+                            >
+
+                                <span class="document-skill">
+                                    Add your skills
+                                </span>
+
+                            </div>
+
+                        </section>
+
+
+
+                        <!-- PROJECTS -->
+
+                        <section class="document-section">
+
+                            <h3>
+                                PROJECTS
+                            </h3>
+
+
+                            <div id="preview-projects">
+
+                                <p class="preview-empty">
+                                    Add a project to display it here.
+                                </p>
+
+                            </div>
+
+                        </section>
+
+
+
+                        <!-- EXPERIENCE -->
+
+                        <section class="document-section">
+
+                            <h3>
+                                EXPERIENCE
+                            </h3>
+
+
+                            <div id="preview-experience">
+
+                                <p class="preview-empty">
+                                    Add experience, internship,
+                                    or relevant work.
+                                </p>
+
+                            </div>
+
+                        </section>
+
+
+                    </article>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 AI ANALYSIS
+            ====================================================== -->
+
+            <section
+                class="ai-analysis-card"
+                id="ai-analysis-section"
+            >
+
+
+                <div class="ai-analysis-header">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            AI CAREER ANALYSIS
+                        </span>
+
+                        <h2>
+                            Resume Analysis & Skill Gap
+                        </h2>
+
+                        <p>
+                            SkillPulse analyzes your resume,
+                            identifies weaknesses and suggests
+                            skills to learn next.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="ai-score"
+                        id="ats-score"
+                    >
+
+                        <span>
+                            ATS
+                        </span>
+
+                        <strong>
+                            —
+                        </strong>
+
+                        <small>
+                            / 100
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ANALYSIS -->
+
+                <div class="ai-analysis-grid">
+
+
+                    <!-- RESUME FEEDBACK -->
+
+                    <div class="analysis-panel">
+
+                        <h3>
+                            AI Resume Feedback
+                        </h3>
+
+
+                        <div
+                            id="resume-feedback"
+                            class="analysis-content"
+                        >
+
+                            <div class="analysis-empty">
+
+                                Click
+                                <strong>
+                                    Analyze with AI
+                                </strong>
+                                to analyze your resume.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SKILL GAP -->
+
+                    <div class="analysis-panel">
+
+                        <h3>
+                            Skill Gap
+                        </h3>
+
+
+                        <div
+                            id="skill-gap-list"
+                            class="skill-gap-list"
+                        >
+
+                            <div class="analysis-empty">
+
+                                Your missing skills
+                                will appear here.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     LEARNING RECOMMENDATIONS
+                ================================================== -->
+
+                <div class="learning-section">
+
+
+                    <div class="learning-heading">
+
+                        <div>
+
+                            <span class="section-kicker">
+                                LEARN NEXT
+                            </span>
+
+                            <h2>
+                                Free Learning Recommendations
+                            </h2>
+
+                            <p>
+                                Learn the skills identified
+                                by SkillPulse's analysis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="learning-recommendations"
+                        class="learning-grid"
+                    >
+
+                        <div
+                            class="analysis-empty learning-empty"
+                        >
+
+                            Analyze your resume first
+                            to receive personalized
+                            learning recommendations.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/resume.js"></script>
+
+</body>
+
+</html>

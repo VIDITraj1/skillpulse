@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Internships — SkillPulse</title>
+
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/topbar.css">
+
+
+    <!-- Internship CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/internship-search.css"
+    >
+
+</head>
+
+
+<body data-page="internships">
+
+
+<div class="app-shell">
+
+
+    <!-- SIDEBAR -->
+
+    <div id="sidebar-root"></div>
+
+
+    <!-- MAIN -->
+
+    <div class="app-main">
+
+
+        <!-- TOPBAR -->
+
+        <div id="topbar-root"></div>
+
+
+        <!-- PAGE -->
+
+        <main class="internship-page">
+
+
+
+
+            <section class="internship-hero">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        ✦ AI-POWERED OPPORTUNITY SEARCH
+                    </span>
+
+                    <h1>
+                        Find internships
+                        <span>made for you.</span>
+                    </h1>
+
+                    <p>
+                        Search thousands of opportunities and discover
+                        roles matched with your skills, preferences and
+                        career goals.
+                    </p>
+
+
+                    <div class="internship-search-box">
+
+                        <span class="search-icon">
+                            🔍
+                        </span>
+
+                        <input
+                            type="text"
+                            id="internshipSearch"
+                            placeholder="Search role, company or skill..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            id="internshipSearchBtn"
+                            class="search-button"
+                            type="button"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+
+                    <div class="popular-searches">
+
+                        <span>Popular:</span>
+
+                        <button
+                            class="popular-search"
+                            data-search="Full Stack"
+                        >
+                            Full Stack
+                        </button>
+
+                        <button
+                            class="popular-search"
+                            data-search="Software Engineer"
+                        >
+                            Software Engineer
+                        </button>
+
+                        <button
+                            class="popular-search"
+                            data-search="Data Analyst"
+                        >
+                            Data Analyst
+                        </button>
+
+                        <button
+                            class="popular-search"
+                            data-search="Machine Learning"
+                        >
+                            Machine Learning
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+            <section class="internship-content">
+
+
+
+                <aside class="internship-filters">
+
+                    <div class="filter-header">
+
+                        <h3>
+                            Filters
+                        </h3>
+
+                        <button
+                            id="clearFilters"
+                            type="button"
+                        >
+                            Clear all
+                        </button>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="locationFilter"
+                            placeholder="e.g. Bengaluru"
+                        >
+
+                    </div>
+
+
+                    <!-- WORK MODE -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Work Mode
+                        </label>
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                value="remote"
+                                class="work-mode-filter"
+                            >
+
+                            <span>Remote</span>
+
+                        </label>
+
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                value="hybrid"
+                                class="work-mode-filter"
+                            >
+
+                            <span>Hybrid</span>
+
+                        </label>
+
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                value="onsite"
+                                class="work-mode-filter"
+                            >
+
+                            <span>On-site</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- SOURCE -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Platform
+                        </label>
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                value="LinkedIn"
+                                class="source-filter"
+                            >
+
+                            <span>LinkedIn</span>
+
+                        </label>
+
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                value="Internshala"
+                                class="source-filter"
+                            >
+
+                            <span>Internshala</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- USER PROFILE -->
+
+                    <div class="profile-match-box">
+
+                        <div class="profile-match-icon">
+                            ✨
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Personalized matching
+                            </strong>
+
+                            <p>
+                                Jobs are matched against your
+                                SkillPulse profile.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- RESULTS -->
+
+                <div class="internship-results">
+
+
+                    <div class="results-header">
+
+                        <div>
+
+                            <h2>
+                                Recommended opportunities
+                            </h2>
+
+                            <p id="resultsSubtitle">
+                                Finding opportunities for you...
+                            </p>
+
+                        </div>
+
+
+                        <select
+                            id="sortJobs"
+                            class="sort-select"
+                        >
+
+                            <option value="match">
+                                Best Match
+                            </option>
+
+                            <option value="latest">
+                                Latest
+                            </option>
+
+                            <option value="company">
+                                Company A–Z
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- LOADING -->
+
+                    <div
+                        class="jobs-loading"
+                        id="jobsLoading"
+                    >
+
+                        <div class="loading-spinner"></div>
+
+                        <p>
+                            Finding internships...
+                        </p>
+
+                    </div>
+
+
+                    <!-- JOB LIST -->
+
+                    <div
+                        class="job-list"
+                        id="jobList"
+                    ></div>
+
+
+                    <!-- EMPTY -->
+
+                    <div
+                        class="jobs-empty"
+                        id="jobsEmpty"
+                        style="display:none;"
+                    >
+
+                        <div class="empty-icon">
+                            🔎
+                        </div>
+
+                        <h3>
+                            No matching opportunities
+                        </h3>
+
+                        <p>
+                            Try another role, company or skill.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/internships.js"></script>
+
+</body>
+
+</html>

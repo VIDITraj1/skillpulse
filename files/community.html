@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community — SkillPulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/topbar.css">
+<link rel="stylesheet" href="css/dashboard-cards.css">
+<link rel="stylesheet" href="css/social-feed.css">
+</head>
+<body data-page="community">
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="app-main">
+    <div id="topbar-root"></div>
+
+    <div class="page-body">
+      <div class="community-layout">
+        <div>
+          <div class="composer">
+            <div class="composer__row">
+              <img src="https://i.pravatar.cc/64?img=47" alt="">
+              <input type="text" placeholder="Share your thoughts, project, or ask a question…">
+            </div>
+            <div class="composer__tags">
+              <span class="composer__tag">📝 Post</span>
+              <span class="composer__tag">📁 Project</span>
+              <span class="composer__tag">❓ Question</span>
+              <span class="composer__tag">🏆 Achievement</span>
+            </div>
+          </div>
+
+          <div class="feed-tabs" data-tabs="#feed-panels">
+            <button data-tab-btn="foryou" class="is-active">For You</button>
+            <button data-tab-btn="following">Following</button>
+            <button data-tab-btn="communities">Communities</button>
+          </div>
+
+          <div id="feed-panels">
+            <div data-tab-panel="foryou" class="is-active">
+              <div class="post-card">
+                <div class="post-card__head">
+                  <img src="https://i.pravatar.cc/64?img=12" alt="">
+                  <div>
+                    <div class="post-card__name">Rohit Verma</div>
+                    <div class="post-card__meta">3h ago · Web Development</div>
+                  </div>
+                </div>
+                <p class="post-card__body">My First Full-Stack Project 🚀 — Finally shipped my Student Management System using React, Node.js, and MongoDB. Looking for feedback on the UI/API structure — let me know what I can improve!</p>
+                <div class="post-card__tags">#project #nodejs #feedback</div>
+                <div class="post-card__media"></div>
+                <div class="post-card__foot"><span>❤️ 124</span><span>💬 23</span><span>↗ Share</span></div>
+              </div>
+
+              <div class="post-card">
+                <div class="post-card__head">
+                  <img src="https://i.pravatar.cc/64?img=32" alt="">
+                  <div>
+                    <div class="post-card__name">Sneha Iyer</div>
+                    <div class="post-card__meta">5h ago · Learning</div>
+                  </div>
+                </div>
+                <p class="post-card__body">Completed my JavaScript assessment today! Scored 84%. Onto React next — wish me luck!</p>
+                <div class="post-card__tags">#javascript #achievement</div>
+                <div class="post-card__foot"><span>❤️ 58</span><span>💬 9</span><span>↗ Share</span></div>
+              </div>
+            </div>
+            <div data-tab-panel="following"><p style="color:var(--ink-500); font-size:0.9rem;">Posts from people you follow will show up here.</p></div>
+            <div data-tab-panel="communities"><p style="color:var(--ink-500); font-size:0.9rem;">Posts from your joined communities will show up here.</p></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="side-panel">
+            <div class="side-panel__title">Communities <a href="#" class="card__link">View All</a></div>
+            <div class="community-chip-row"><span class="community-chip-row__ico">🌐</span><div><div class="community-chip-row__name">Web Development</div><div class="community-chip-row__meta">12.4k members</div></div></div>
+            <div class="community-chip-row"><span class="community-chip-row__ico">⚛️</span><div><div class="community-chip-row__name">React Developers</div><div class="community-chip-row__meta">8.1k members</div></div></div>
+            <div class="community-chip-row"><span class="community-chip-row__ico">🐍</span><div><div class="community-chip-row__name">Python</div><div class="community-chip-row__meta">6.2k members</div></div></div>
+            <div class="community-chip-row"><span class="community-chip-row__ico">🤖</span><div><div class="community-chip-row__name">AI / ML</div><div class="community-chip-row__meta">4.8k members</div></div></div>
+            <div class="community-chip-row"><span class="community-chip-row__ico">🎨</span><div><div class="community-chip-row__name">UI/UX Design</div><div class="community-chip-row__meta">3.9k members</div></div></div>
+          </div>
+
+          <div class="side-panel">
+            <div class="side-panel__title">People You May Know</div>
+            <div class="people-row">
+              <img src="https://i.pravatar.cc/64?img=15" alt="">
+              <div class="people-row__info"><div class="people-row__name">Arjun Mehta</div><div class="people-row__role">Full Stack Developer</div></div>
+              <button class="btn btn--outline" style="padding:6px 12px; font-size:0.78rem;">Connect</button>
+            </div>
+            <div class="people-row">
+              <img src="https://i.pravatar.cc/64?img=25" alt="">
+              <div class="people-row__info"><div class="people-row__name">Sneha Kapoor</div><div class="people-row__role">UI/UX Designer</div></div>
+              <button class="btn btn--outline" style="padding:6px 12px; font-size:0.78rem;">Connect</button>
+            </div>
+            <div class="people-row">
+              <img src="https://i.pravatar.cc/64?img=51" alt="">
+              <div class="people-row__info"><div class="people-row__name">Karan Singh</div><div class="people-row__role">Backend Developer</div></div>
+              <button class="btn btn--outline" style="padding:6px 12px; font-size:0.78rem;">Connect</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

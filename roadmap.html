@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Career Roadmap — SkillPulse</title>
+
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/dashboard-cards.css">
+
+
+    <link rel="stylesheet" href="css/roadmap.css">
+
+</head>
+
+
+<body data-page="roadmap">
+
+<div class="app-shell">
+
+
+    <div id="sidebar-root"></div>
+
+
+    <div class="app-main">
+
+
+        <div id="topbar-root"></div>
+
+
+
+        <main class="page-body">
+
+            <div class="roadmap-page">
+
+
+
+                <section class="roadmap-header">
+
+                    <div>
+
+                        <span class="roadmap-eyebrow">
+                            CAREER DEVELOPMENT
+                        </span>
+
+                        <h1>
+                            Career Roadmap
+                        </h1>
+
+                        <p>
+                            Choose your career goal and follow a
+                            structured path from learning to employment.
+                        </p>
+
+                    </div>
+
+                    <div class="roadmap-role-box">
+
+                        <label for="careerRole">
+                            Career Goal
+                        </label>
+
+                        <select id="careerRole">
+
+                            <option value="fullstack">
+                                Full Stack Developer
+                            </option>
+
+                            <option value="frontend">
+                                Frontend Developer
+                            </option>
+
+                            <option value="backend">
+                                Backend Developer
+                            </option>
+
+                            <option value="aiml">
+                                AI / ML Engineer
+                            </option>
+
+                            <option value="data">
+                                Data Analyst
+                            </option>
+
+                            <option value="devops">
+                                DevOps Engineer
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </section>
+
+
+                <section class="roadmap-overview">
+
+                    <div class="overview-card">
+
+                        <div class="overview-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Current Goal
+                            </span>
+
+                            <strong id="currentGoal">
+                                Full Stack Developer
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="overview-card">
+
+                        <div class="overview-icon">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong id="progressPercentage">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="overview-card">
+
+                        <div class="overview-icon">
+                            ✅
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Completed
+                            </span>
+
+                            <strong id="completedStages">
+                                0 / 10
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="overview-card">
+
+                        <div class="overview-icon">
+                            ⏱️
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Estimated Time
+                            </span>
+
+                            <strong id="estimatedTime">
+                                6–9 months
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <section class="progress-section">
+
+                    <div class="progress-section__top">
+
+                        <div>
+
+                            <strong>
+                                Your Career Journey
+                            </strong>
+
+                            <span id="progressText">
+                                Start your journey today.
+                            </span>
+
+                        </div>
+
+                        <button
+                            id="resetProgress"
+                            type="button"
+                        >
+                            Reset Progress
+                        </button>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-bar__fill"
+                            id="progressFill"
+                        ></div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="roadmap-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span>
+                                YOUR ROADMAP
+                            </span>
+
+                            <h2>
+                                Step-by-step career path
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="roadmap-track"
+                        id="roadmapTrack"
+                    >
+
+
+
+                    </div>
+
+                </section>
+
+
+
+                <section class="roadmap-bottom-grid">
+
+
+
+                    <div class="roadmap-card">
+
+                        <div class="roadmap-card__header">
+
+                            <div>
+
+                                <span>
+                                    RECOMMENDED
+                                </span>
+
+                                <h2>
+                                    Next Steps
+                                </h2>
+
+                            </div>
+
+                            <span class="next-step-icon">
+                                →
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            id="nextSteps"
+                            class="next-steps"
+                        >
+
+                            <!-- JavaScript -->
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="roadmap-card stage-details"
+                        id="stageDetails"
+                    >
+
+                        <div class="stage-details__empty">
+
+                            <div>
+                                🧭
+                            </div>
+
+                            <h3>
+                                Select a roadmap stage
+                            </h3>
+
+                            <p>
+                                Click any stage above to see what
+                                you need to learn and build.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="roadmap-banner">
+
+                    <div class="roadmap-banner__icon">
+                        🚀
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Keep building. Keep improving.
+                        </h2>
+
+                        <p>
+                            Every completed stage takes you one step
+                            closer to your career goal.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/roadmap.js"></script>
+
+</body>
+</html>

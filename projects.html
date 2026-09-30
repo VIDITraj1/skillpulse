@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Project Workspace — SkillPulse</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+
+
+    <link rel="stylesheet" href="css/base.css">
+
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <link rel="stylesheet" href="css/topbar.css">
+
+    <link rel="stylesheet" href="css/dashboard-cards.css">
+
+
+
+    <link
+        rel="stylesheet"
+        href="css/project-collab.css"
+    >
+
+</head>
+
+
+<body data-page="projects">
+
+
+<div class="app-shell">
+
+
+    <div id="sidebar-root"></div>
+
+
+
+    <div class="app-main">
+
+
+
+        <div id="topbar-root"></div>
+
+
+
+        <main class="page-body">
+
+
+            <div class="project-page">
+
+
+
+                <section class="project-header">
+
+
+                    <div class="project-header__main">
+
+
+                        <div class="project-icon">
+                            📁
+                        </div>
+
+
+                        <div>
+
+                            <div class="project-header__title-row">
+
+                                <h1 id="projectTitle">
+                                    Campus Event Management System
+                                </h1>
+
+                                <span
+                                    class="status-pill"
+                                    id="projectStatus"
+                                >
+                                    In Progress
+                                </span>
+
+                            </div>
+
+
+                            <p id="projectDescription">
+                                A web application to manage college
+                                events, registrations, and notifications.
+                            </p>
+
+
+                            <div class="project-meta">
+
+                                <span>
+                                    👥
+                                    <strong id="memberCount">
+                                        3
+                                    </strong>
+                                    members
+                                </span>
+
+                                <span>
+                                    📋
+                                    <strong id="taskCount">
+                                        5
+                                    </strong>
+                                    tasks
+                                </span>
+
+                                <span>
+                                    📅
+                                    Updated today
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-header__actions">
+
+                        <button
+                            class="project-action-btn"
+                            id="editProjectBtn"
+                            type="button"
+                        >
+                            ✏️ Edit
+                        </button>
+
+                        <button
+                            class="project-action-btn project-action-btn--primary"
+                            id="inviteBtn"
+                            type="button"
+                        >
+                            + Invite
+                        </button>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <nav
+                    class="workspace-tabs"
+                    id="workspaceTabs"
+                >
+
+                    <button
+                        class="is-active"
+                        data-tab="overview"
+                        type="button"
+                    >
+                        Overview
+                    </button>
+
+                    <button
+                        data-tab="tasks"
+                        type="button"
+                    >
+                        Tasks
+                    </button>
+
+                    <button
+                        data-tab="members"
+                        type="button"
+                    >
+                        Members
+                    </button>
+
+                    <button
+                        data-tab="files"
+                        type="button"
+                    >
+                        Files
+                    </button>
+
+                    <button
+                        data-tab="discussion"
+                        type="button"
+                    >
+                        Discussion
+                    </button>
+
+                </nav>
+
+
+
+
+                <div class="workspace-content">
+
+
+
+
+                    <section
+                        class="workspace-panel is-active"
+                        data-panel="overview"
+                    >
+
+
+                        <div class="overview-grid">
+
+
+
+
+                            <div class="project-card">
+
+                                <div class="project-card__header">
+
+                                    <div>
+
+                                        <span class="section-label">
+                                            PROJECT
+                                        </span>
+
+                                        <h2>
+                                            Project Details
+                                        </h2>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="project-card__body">
+
+                                    <p
+                                        class="project-description"
+                                        id="overviewDescription"
+                                    >
+                                        A web application to manage
+                                        college events, registrations,
+                                        and notifications.
+                                    </p>
+
+
+                                    <div class="project-tags">
+
+                                        <span>
+                                            HTML
+                                        </span>
+
+                                        <span>
+                                            CSS
+                                        </span>
+
+                                        <span>
+                                            JavaScript
+                                        </span>
+
+                                        <span>
+                                            Node.js
+                                        </span>
+
+                                        <span>
+                                            MongoDB
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="project-detail-grid">
+
+                                        <div>
+
+                                            <small>
+                                                Created
+                                            </small>
+
+                                            <strong>
+                                                September 2026
+                                            </strong>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <small>
+                                                Category
+                                            </small>
+
+                                            <strong>
+                                                Web Development
+                                            </strong>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <small>
+                                                Visibility
+                                            </small>
+
+                                            <strong>
+                                                Team
+                                            </strong>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <small>
+                                                Status
+                                            </small>
+
+                                            <strong id="overviewStatus">
+                                                In Progress
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PROGRESS -->
+
+                            <div class="project-card">
+
+                                <div class="project-card__header">
+
+                                    <div>
+
+                                        <span class="section-label">
+                                            PROGRESS
+                                        </span>
+
+                                        <h2>
+                                            Project Progress
+                                        </h2>
+
+                                    </div>
+
+
+                                    <strong
+                                        class="progress-number"
+                                        id="progressNumber"
+                                    >
+                                        40%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="project-card__body">
+
+                                    <div class="project-progress">
+
+                                        <div
+                                            class="project-progress__fill"
+                                            id="progressFill"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <div class="progress-stats">
+
+                                        <span>
+                                            <strong id="completedTaskCount">
+                                                2
+                                            </strong>
+                                            completed
+                                        </span>
+
+                                        <span>
+                                            <strong id="remainingTaskCount">
+                                                3
+                                            </strong>
+                                            remaining
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="task-preview">
+
+                                        <h3>
+                                            Recent Tasks
+                                        </h3>
+
+                                        <div
+                                            id="overviewTasks"
+                                        ></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- TEAM CHAT -->
+
+                        <div class="project-card chat-card">
+
+                            <div class="project-card__header">
+
+                                <div>
+
+                                    <span class="section-label">
+                                        COLLABORATION
+                                    </span>
+
+                                    <h2>
+                                        Team Chat
+                                    </h2>
+
+                                </div>
+
+                                <span class="online-status">
+                                    ● Team online
+                                </span>
+
+                            </div>
+
+
+                            <div class="chat-panel">
+
+
+                                <div
+                                    class="chat-log"
+                                    id="chatLog"
+                                ></div>
+
+
+                                <div class="chat-input-row">
+
+                                    <input
+                                        type="text"
+                                        id="chatInput"
+                                        placeholder="Type a message..."
+                                        maxlength="500"
+                                    >
+
+                                    <button
+                                        class="send-message-btn"
+                                        id="sendMessage"
+                                        type="button"
+                                    >
+                                        Send
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <section
+                        class="workspace-panel"
+                        data-panel="tasks"
+                    >
+
+
+                        <div class="project-card">
+
+
+                            <div class="project-card__header">
+
+                                <div>
+
+                                    <span class="section-label">
+                                        WORK MANAGEMENT
+                                    </span>
+
+                                    <h2>
+                                        Project Tasks
+                                    </h2>
+
+                                </div>
+
+
+                                <button
+                                    class="add-task-btn"
+                                    id="addTaskBtn"
+                                    type="button"
+                                >
+                                    + Add Task
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="task-list"
+                                id="taskList"
+                            ></div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <section
+                        class="workspace-panel"
+                        data-panel="members"
+                    >
+
+
+                        <div class="project-card">
+
+
+                            <div class="project-card__header">
+
+                                <div>
+
+                                    <span class="section-label">
+                                        TEAM
+                                    </span>
+
+                                    <h2>
+                                        Team Members
+                                    </h2>
+
+                                </div>
+
+
+                                <button
+                                    class="add-task-btn"
+                                    id="addMemberBtn"
+                                    type="button"
+                                >
+                                    + Add Member
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="members-grid"
+                                id="membersGrid"
+                            ></div>
+
+
+                        </div>
+
+
+
+                        <div class="looking-card">
+
+                            <div class="looking-card__icon">
+                                🔎
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    LOOKING FOR
+                                </span>
+
+                                <h3>
+                                    Backend Developer
+                                </h3>
+
+                                <p>
+                                    We need someone comfortable with
+                                    Node.js, Express and MongoDB.
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="project-action-btn project-action-btn--primary"
+                                id="findMemberBtn"
+                                type="button"
+                            >
+                                Find Teammates
+                            </button>
+
+                        </div>
+
+
+                    </section>
+
+
+
+
+                    <section
+                        class="workspace-panel"
+                        data-panel="files"
+                    >
+
+
+                        <div class="project-card">
+
+
+                            <div class="project-card__header">
+
+                                <div>
+
+                                    <span class="section-label">
+                                        PROJECT FILES
+                                    </span>
+
+                                    <h2>
+                                        Shared Files
+                                    </h2>
+
+                                </div>
+
+
+                                <button
+                                    class="add-task-btn"
+                                    id="uploadFileBtn"
+                                    type="button"
+                                >
+                                    + Upload File
+                                </button>
+
+                            </div>
+
+
+                            <input
+                                type="file"
+                                id="fileInput"
+                                hidden
+                                multiple
+                            >
+
+
+                            <div
+                                class="file-list"
+                                id="fileList"
+                            ></div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <section
+                        class="workspace-panel"
+                        data-panel="discussion"
+                    >
+
+
+                        <div class="project-card">
+
+
+                            <div class="project-card__header">
+
+                                <div>
+
+                                    <span class="section-label">
+                                        TEAM DISCUSSION
+                                    </span>
+
+                                    <h2>
+                                        Discussions
+                                    </h2>
+
+                                </div>
+
+
+                                <button
+                                    class="add-task-btn"
+                                    id="newDiscussionBtn"
+                                    type="button"
+                                >
+                                    + New Discussion
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="discussion-list"
+                                id="discussionList"
+                            ></div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+>
+
+<div
+    class="project-modal"
+    id="projectModal"
+    hidden
+>
+
+    <div class="project-modal__box">
+
+        <div class="project-modal__header">
+
+            <h2 id="modalTitle">
+                Add Task
+            </h2>
+
+            <button
+                id="closeModal"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="project-toast"
+    id="projectToast"
+></div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/project.js"></script>
+
+</body>
+</html>

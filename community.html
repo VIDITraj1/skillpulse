@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Community — SkillPulse</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/dashboard-cards.css">
+
+
+    <link rel="stylesheet" href="css/social-feed.css">
+</head>
+
+<body data-page="community">
+
+<div class="app-shell">
+
+
+
+    <div id="sidebar-root"></div>
+
+
+
+
+    <div class="app-main">
+
+        <div id="topbar-root"></div>
+
+
+
+        <main class="page-body">
+
+            <div class="community-page">
+
+
+
+                <section class="community-header">
+
+                    <div>
+
+                        <div class="community-eyebrow">
+                            SKILLPULSE COMMUNITY
+                        </div>
+
+                        <h1>
+                            Learn. Build. Connect.
+                        </h1>
+
+                        <p>
+                            Share your journey, ask questions,
+                            showcase projects and connect with
+                            other learners and developers.
+                        </p>
+
+                    </div>
+
+                    <div class="community-header__stats">
+
+                        <div class="community-stat">
+                            <strong id="memberCount">
+                                32.8K
+                            </strong>
+
+                            <span>
+                                Members
+                            </span>
+                        </div>
+
+                        <div class="community-stat">
+                            <strong id="postCount">
+                                1.2K
+                            </strong>
+
+                            <span>
+                                Posts
+                            </span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+
+                <div class="community-layout">
+
+
+
+
+                    <section class="community-main">
+
+
+
+
+                        <div class="composer">
+
+                            <div class="composer__row">
+
+                                <img
+                                    id="composerAvatar"
+                                    src="https://i.pravatar.cc/64?img=47"
+                                    alt="Profile"
+                                >
+
+                                <button
+                                    class="composer__input"
+                                    id="openComposer"
+                                    type="button"
+                                >
+                                    Share your thoughts, project,
+                                    or ask a question...
+                                </button>
+
+                            </div>
+
+
+                            <div class="composer__tags">
+
+                                <button
+                                    class="composer__tag"
+                                    data-post-type="Post"
+                                    type="button"
+                                >
+                                    📝 Post
+                                </button>
+
+                                <button
+                                    class="composer__tag"
+                                    data-post-type="Project"
+                                    type="button"
+                                >
+                                    📁 Project
+                                </button>
+
+                                <button
+                                    class="composer__tag"
+                                    data-post-type="Question"
+                                    type="button"
+                                >
+                                    ❓ Question
+                                </button>
+
+                                <button
+                                    class="composer__tag"
+                                    data-post-type="Achievement"
+                                    type="button"
+                                >
+                                    🏆 Achievement
+                                </button>
+
+                            </div>
+
+
+                            <!-- EXPANDED COMPOSER -->
+
+                            <div
+                                class="composer-expanded"
+                                id="composerExpanded"
+                                hidden
+                            >
+
+                                <div class="composer-expanded__top">
+
+                                    <div class="composer-user">
+
+                                        <img
+                                            id="expandedAvatar"
+                                            src="https://i.pravatar.cc/64?img=47"
+                                            alt=""
+                                        >
+
+                                        <div>
+
+                                            <strong id="expandedUsername">
+                                                SkillPulse User
+                                            </strong>
+
+                                            <span id="selectedPostType">
+                                                Post
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <button
+                                        class="composer-close"
+                                        id="closeComposer"
+                                        type="button"
+                                    >
+                                        ×
+                                    </button>
+
+                                </div>
+
+
+                                <textarea
+                                    id="postContent"
+                                    maxlength="1000"
+                                    placeholder="What would you like to share?"
+                                ></textarea>
+
+
+                                <div class="composer-expanded__bottom">
+
+                                    <span id="characterCount">
+                                        0 / 1000
+                                    </span>
+
+                                    <div>
+
+                                        <button
+                                            class="btn-secondary"
+                                            id="cancelPost"
+                                            type="button"
+                                        >
+                                            Cancel
+                                        </button>
+
+                                        <button
+                                            class="btn-primary"
+                                            id="publishPost"
+                                            type="button"
+                                        >
+                                            Publish
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="community-search">
+
+                            <span class="community-search__icon">
+                                🔍
+                            </span>
+
+                            <input
+                                id="postSearch"
+                                type="search"
+                                placeholder="Search community posts..."
+                            >
+
+                        </div>
+
+
+
+
+                        <div class="feed-tabs">
+
+                            <button
+                                class="is-active"
+                                data-tab="foryou"
+                                type="button"
+                            >
+                                For You
+                            </button>
+
+                            <button
+                                data-tab="following"
+                                type="button"
+                            >
+                                Following
+                            </button>
+
+                            <button
+                                data-tab="communities"
+                                type="button"
+                            >
+                                Communities
+                            </button>
+
+                        </div>
+
+
+
+
+                        <div id="feedContainer">
+
+
+
+                            <div
+                                class="feed-panel is-active"
+                                data-panel="foryou"
+                                id="forYouPanel"
+                            >
+
+
+
+                            </div>
+
+
+
+
+                            <div
+                                class="feed-panel"
+                                data-panel="following"
+                                id="followingPanel"
+                            >
+
+                                <div class="empty-state">
+
+                                    <div class="empty-state__icon">
+                                        👥
+                                    </div>
+
+                                    <h3>
+                                        Your network starts here
+                                    </h3>
+
+                                    <p>
+                                        Connect with developers and
+                                        learners to see their posts here.
+                                    </p>
+
+                                    <button
+                                        class="btn-primary"
+                                        id="findPeopleBtn"
+                                        type="button"
+                                    >
+                                        Find People
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div
+                                class="feed-panel"
+                                data-panel="communities"
+                                id="communitiesPanel"
+                            >
+
+                                <div class="community-grid">
+
+                                    <div class="community-card">
+
+                                        <div class="community-card__icon">
+                                            🌐
+                                        </div>
+
+                                        <h3>
+                                            Web Development
+                                        </h3>
+
+                                        <p>
+                                            Discuss frontend, backend,
+                                            APIs and full-stack development.
+                                        </p>
+
+                                        <span>
+                                            12.4K members
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            class="join-community"
+                                        >
+                                            Join Community
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="community-card">
+
+                                        <div class="community-card__icon">
+                                            ⚛️
+                                        </div>
+
+                                        <h3>
+                                            React Developers
+                                        </h3>
+
+                                        <p>
+                                            Learn and discuss React,
+                                            Next.js and modern frontend.
+                                        </p>
+
+                                        <span>
+                                            8.1K members
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            class="join-community"
+                                        >
+                                            Join Community
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="community-card">
+
+                                        <div class="community-card__icon">
+                                            🐍
+                                        </div>
+
+                                        <h3>
+                                            Python
+                                        </h3>
+
+                                        <p>
+                                            Python programming, Django,
+                                            Flask and automation.
+                                        </p>
+
+                                        <span>
+                                            6.2K members
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            class="join-community"
+                                        >
+                                            Join Community
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="community-card">
+
+                                        <div class="community-card__icon">
+                                            🤖
+                                        </div>
+
+                                        <h3>
+                                            AI / ML
+                                        </h3>
+
+                                        <p>
+                                            Artificial intelligence,
+                                            machine learning and data science.
+                                        </p>
+
+                                        <span>
+                                            4.8K members
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            class="join-community"
+                                        >
+                                            Join Community
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="community-card">
+
+                                        <div class="community-card__icon">
+                                            🎨
+                                        </div>
+
+                                        <h3>
+                                            UI / UX Design
+                                        </h3>
+
+                                        <p>
+                                            Share designs and discuss
+                                            user experience.
+                                        </p>
+
+                                        <span>
+                                            3.9K members
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            class="join-community"
+                                        >
+                                            Join Community
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="community-card">
+
+                                        <div class="community-card__icon">
+                                            💼
+                                        </div>
+
+                                        <h3>
+                                            Placements
+                                        </h3>
+
+                                        <p>
+                                            Placement preparation,
+                                            internships and career discussions.
+                                        </p>
+
+                                        <span>
+                                            9.7K members
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            class="join-community"
+                                        >
+                                            Join Community
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    
+
+                    <aside class="community-sidebar">
+
+
+                        
+
+                        <div class="side-panel">
+
+                            <div class="side-panel__title">
+
+                                <span>
+                                    Communities
+                                </span>
+
+                                <button
+                                    id="viewAllCommunities"
+                                    type="button"
+                                >
+                                    View All
+                                </button>
+
+                            </div>
+
+
+                            <div class="community-list">
+
+                                <div class="community-row">
+
+                                    <span class="community-row__icon">
+                                        🌐
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            Web Development
+                                        </strong>
+
+                                        <small>
+                                            12.4K members
+                                        </small>
+                                    </div>
+
+                                    <span class="community-row__arrow">
+                                        →
+                                    </span>
+
+                                </div>
+
+
+                                <div class="community-row">
+
+                                    <span class="community-row__icon">
+                                        ⚛️
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            React Developers
+                                        </strong>
+
+                                        <small>
+                                            8.1K members
+                                        </small>
+                                    </div>
+
+                                    <span class="community-row__arrow">
+                                        →
+                                    </span>
+
+                                </div>
+
+
+                                <div class="community-row">
+
+                                    <span class="community-row__icon">
+                                        🐍
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            Python
+                                        </strong>
+
+                                        <small>
+                                            6.2K members
+                                        </small>
+                                    </div>
+
+                                    <span class="community-row__arrow">
+                                        →
+                                    </span>
+
+                                </div>
+
+
+                                <div class="community-row">
+
+                                    <span class="community-row__icon">
+                                        🤖
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            AI / ML
+                                        </strong>
+
+                                        <small>
+                                            4.8K members
+                                        </small>
+                                    </div>
+
+                                    <span class="community-row__arrow">
+                                        →
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        
+
+                        <div class="side-panel">
+
+                            <div class="side-panel__title">
+
+                                <span>
+                                    People You May Know
+                                </span>
+
+                            </div>
+
+
+                            <div class="people-list">
+
+
+                                <div class="person-row">
+
+                                    <img
+                                        src="https://i.pravatar.cc/64?img=15"
+                                        alt=""
+                                    >
+
+                                    <div class="person-info">
+
+                                        <strong>
+                                            Arjun Mehta
+                                        </strong>
+
+                                        <small>
+                                            Full Stack Developer
+                                        </small>
+
+                                    </div>
+
+                                    <button
+                                        class="connect-btn"
+                                        type="button"
+                                    >
+                                        Connect
+                                    </button>
+
+                                </div>
+
+
+                                <div class="person-row">
+
+                                    <img
+                                        src="https://i.pravatar.cc/64?img=25"
+                                        alt=""
+                                    >
+
+                                    <div class="person-info">
+
+                                        <strong>
+                                            Sneha Kapoor
+                                        </strong>
+
+                                        <small>
+                                            UI/UX Designer
+                                        </small>
+
+                                    </div>
+
+                                    <button
+                                        class="connect-btn"
+                                        type="button"
+                                    >
+                                        Connect
+                                    </button>
+
+                                </div>
+
+
+                                <div class="person-row">
+
+                                    <img
+                                        src="https://i.pravatar.cc/64?img=51"
+                                        alt=""
+                                    >
+
+                                    <div class="person-info">
+
+                                        <strong>
+                                            Karan Singh
+                                        </strong>
+
+                                        <small>
+                                            Backend Developer
+                                        </small>
+
+                                    </div>
+
+                                    <button
+                                        class="connect-btn"
+                                        type="button"
+                                    >
+                                        Connect
+                                    </button>
+
+                                </div>
+
+
+                                <div class="person-row">
+
+                                    <img
+                                        src="https://i.pravatar.cc/64?img=32"
+                                        alt=""
+                                    >
+
+                                    <div class="person-info">
+
+                                        <strong>
+                                            Sneha Iyer
+                                        </strong>
+
+                                        <small>
+                                            JavaScript Developer
+                                        </small>
+
+                                    </div>
+
+                                    <button
+                                        class="connect-btn"
+                                        type="button"
+                                    >
+                                        Connect
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                      
+                        <div class="side-panel community-rules">
+
+                            <div class="side-panel__title">
+                                Community Guidelines
+                            </div>
+
+                            <ul>
+
+                                <li>
+                                    Be respectful to others.
+                                </li>
+
+                                <li>
+                                    Share useful knowledge.
+                                </li>
+
+                                <li>
+                                    Don't spam or promote scams.
+                                </li>
+
+                                <li>
+                                    Help beginners learn.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+
+<div
+    class="community-toast"
+    id="communityToast"
+>
+</div>
+
+
+
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/community.js"></script>
+
+</body>
+
+</html>

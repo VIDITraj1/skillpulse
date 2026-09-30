@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Search — SkillPulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/topbar.css">
+<link rel="stylesheet" href="css/dashboard-cards.css">
+<link rel="stylesheet" href="css/internship-search.css">
+</head>
+<body data-page="internships">
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="app-main">
+    <div id="topbar-root"></div>
+
+    <div class="page-body">
+      <div class="search-panel">
+        <h1>Find Your Perfect Internship</h1>
+        <p>Discover opportunities that match your skills and career goals.</p>
+        <div class="search-panel__bar">
+          <input type="text" placeholder="Role / Company / Skills" data-search-input>
+          <button class="btn btn--primary">Search</button>
+        </div>
+        <div class="filter-row">
+          <span class="filter-chip">Location ▾</span>
+          <span class="filter-chip">Remote / On-site ▾</span>
+          <span class="filter-chip">Duration ▾</span>
+          <span class="filter-chip">Stipend ▾</span>
+          <span class="filter-chip">More Filters ⚙️</span>
+        </div>
+      </div>
+
+      <div class="result-list">
+        <div class="result-card" data-searchable>
+          <div class="result-card__logo">G</div>
+          <div class="result-card__info">
+            <div class="result-card__title">Frontend Developer Intern</div>
+            <div class="result-card__company">Google</div>
+            <div class="result-card__meta"><span>Remote</span><span>6 months</span><span>₹30k/month</span></div>
+          </div>
+          <div class="result-card__side">
+            <span class="match-badge">82% match</span>
+            <button class="btn btn--primary" data-apply-btn>Apply</button>
+          </div>
+        </div>
+
+        <div class="result-card" data-searchable>
+          <div class="result-card__logo">A</div>
+          <div class="result-card__info">
+            <div class="result-card__title">Software Developer Intern</div>
+            <div class="result-card__company">Amazon</div>
+            <div class="result-card__meta"><span>Bengaluru</span><span>3 months</span><span>₹25k/month</span></div>
+          </div>
+          <div class="result-card__side">
+            <span class="match-badge">76% match</span>
+            <button class="btn btn--primary" data-apply-btn>Apply</button>
+          </div>
+        </div>
+
+        <div class="result-card" data-searchable>
+          <div class="result-card__logo">T</div>
+          <div class="result-card__info">
+            <div class="result-card__title">Data Analyst Intern</div>
+            <div class="result-card__company">TCS</div>
+            <div class="result-card__meta"><span>Hybrid</span><span>4 months</span><span>₹20k/month</span></div>
+          </div>
+          <div class="result-card__side">
+            <span class="match-badge">86% match</span>
+            <button class="btn btn--primary" data-apply-btn>Apply</button>
+          </div>
+        </div>
+
+        <div class="result-card" data-searchable>
+          <div class="result-card__logo">A</div>
+          <div class="result-card__info">
+            <div class="result-card__title">UI/UX Design Intern</div>
+            <div class="result-card__company">Adobe</div>
+            <div class="result-card__meta"><span>Remote</span><span>3 months</span><span>₹18k/month</span></div>
+          </div>
+          <div class="result-card__side">
+            <span class="match-badge">82% match</span>
+            <button class="btn btn--primary" data-apply-btn>Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
